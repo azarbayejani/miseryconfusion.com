@@ -52,7 +52,7 @@ section {
     border-bottom: 1px solid #c9d1d9;
 }
 
-section:last-child {
+section:last-of-type {
     border-bottom: none;
 }
 
