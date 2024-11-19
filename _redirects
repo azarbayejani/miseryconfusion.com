@@ -1,1 +1,2 @@
 https://azarbayejani.com/* https://miseryconfusion.com/:splat 301!
+/images/:file /.netlify/images/?url=/images/:file
