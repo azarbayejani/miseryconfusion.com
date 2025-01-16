@@ -165,3 +165,7 @@ img {
 ul li {
     margin-bottom: .25em;
 }
+
+.product-page {
+    display: flex; flex-direction: column
+}

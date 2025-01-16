@@ -1,0 +1,17 @@
+---
+layout: main
+---
+
+{% import 'components.njk' as components %}
+
+<section style="text-align: center">
+  <h1>🕋 miseryconfusion</h1>
+</section>
+<section class="links" style="margin-top: 24px">
+  <div>
+    {% for link in site.data.links %}
+      {{ components.linkButton(link.name, link.url, link.image) }}
+    {% endfor %}
+  </div>
+</section>
+
