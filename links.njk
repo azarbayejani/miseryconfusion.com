@@ -9,7 +9,7 @@ layout: main
 </section>
 <section class="links" style="margin-top: 24px">
   <div>
-    {% for link in site.data.links %}
+    {% for link in links %}
       {{ components.linkButton(link.name, link.url, link.image) }}
     {% endfor %}
   </div>
