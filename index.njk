@@ -4,40 +4,46 @@ layout: main
 
 {% include 'nav.njk' %}
 
-<p>
-  <em>the website of Bobby Azarbayejani (aka 'nohup')</em>
-</p>
+<section>
+  <p>
+    <em>the website of Bobby Azarbayejani (aka 'nohup')</em>
+  </p>
 
-<p>
-  <a href="mailto:contact@miseryconfusion.com"
-    >✉️ contact@miseryconfusion.com</a
-  >
-</p>
+  <p>
+    <a href="mailto:contact@miseryconfusion.com"
+      >✉️ contact@miseryconfusion.com</a
+    >
+  </p>
 
-<p>
-  ☁️ currently working on
-  <a href="/bandcamp-tempo-adjust"><em>Bandcamp Tempo Adjust</em></a
-  >, <a href="/discogs-tempo-adjust"><em>Discogs Tempo Adjust</em></a
-  >, and some other web projects
-</p>
+  <p>
+    ☁️ currently working on
+    <a href="/bandcamp-tempo-adjust"><em>Bandcamp Tempo Adjust</em></a
+    >, <a href="/discogs-tempo-adjust"><em>Discogs Tempo Adjust</em></a
+    >, and some other web projects
+  </p>
 
-<img
-  src="/images/parasyte.png"
-  alt="An image from the manga Parasyte. A teen boy wearing a shirt that says 'MISERY CONFUSION' on it sits on a bed. His left arm is a grotesque alien creature that is devouring books. To the bottom right of the frame, there is a book titled Fish Encyclopedia."
-  usemap="#image-map"
-  class="full-width-image"
-/>
-
-<map name="image-map">
-  <area
-    target="_blank"
-    alt="Fish Encyclopedia"
-    title="Fish Encyclopedia"
-    href="https://aashishgadani.com"
-    coords="528,621,511,668,633,704,652,645"
-    shape="poly"
+  <img
+    src="/images/parasyte.png"
+    alt="An image from the manga Parasyte. A teen boy wearing a shirt that says 'MISERY CONFUSION' on it sits on a bed. His left arm is a grotesque alien creature that is devouring books. To the bottom right of the frame, there is a book titled Fish Encyclopedia."
+    usemap="#image-map"
+    class="full-width-image"
   />
-</map>
+
+  <map name="image-map">
+    <area
+      target="_blank"
+      alt="Fish Encyclopedia"
+      title="Fish Encyclopedia"
+      href="https://aashishgadani.com"
+      coords="528,621,511,668,633,704,652,645"
+      shape="poly"
+    />
+  </map>
+</section>
+
+<section>
+  <p id="lastModified">This website was last updated on {% lastCommitDate %}</p>
+</section>
 
 <script src="/js/imageMapResizer.min.js"></script>
 <script>
@@ -45,7 +51,3 @@ layout: main
     imageMapResize()
   })
 </script>
-
-<section>
-  <p id="lastModified">This website was last updated on {% lastCommitDate %}</p>
-</section>
