@@ -1,5 +1,7 @@
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
+import fs from "fs";
+
 import childProcess from "child_process";
 
 import { DateTime } from "luxon";
@@ -22,5 +24,21 @@ export default function (eleventyConfig) {
       DateTime.DATE_FULL
     );
     return formattedDate;
+  });
+
+  eleventyConfig.addFilter("bust", (url) => {
+    const [urlPart, paramPart] = url.split("?");
+    const params = new URLSearchParams(paramPart || "");
+    const relativeUrl =
+      urlPart.charAt(0) == "/" ? urlPart.substring(1) : urlPart;
+
+    try {
+      const fileStats = fs.statSync(relativeUrl);
+      const dateTimeModified = new DateTime(fileStats.mtime).toFormat("X");
+
+      params.set("v", dateTimeModified);
+    } catch (error) {}
+
+    return `${urlPart}?${params}`;
   });
 }

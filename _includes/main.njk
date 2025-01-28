@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
     <title>{{ title | default('miseryconfusion.com') }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="{{ '/style.css' | url | bust }}" type="text/css" />
     <meta name="og:image" content="{{ image | default('/images/kaaba-emoji.png') }}" />
     <meta name="og:title" content="{{ title | default('miseryconfusion.com') }}" />
     <meta
