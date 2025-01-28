@@ -516,6 +516,15 @@ export default function () {
           artistName: "'sighup'",
         },
         {
+          title:
+            "Tapdup at WMUC Radio w/ Gab7, 'sighup', Drankay, and Permanent",
+          date: "2012-12-02",
+          venue: "WMUC Radio",
+          location: "College Park, MD",
+          category: "liveset",
+          artistName: "'sighup'",
+        },
+        {
           title: "SIGHUP @ Rid of Me",
           date: "2013-03-16",
           venue: "Rid of Me",
