@@ -1,0 +1,121 @@
+---
+layout: main
+---
+
+{% import 'components.njk' as components %}
+
+<style>
+  .shows {
+    {# text-align: center; #}
+  }
+
+  .showList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .show {
+      margin-bottom: 2em;
+      {# text-align: center; #}
+  }
+
+  .show_tags {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      {# justify-content: center; #}
+      gap: 0.5em;
+  }
+
+  .show_tag {
+      padding: 0.25em 0.5em;
+      border-radius: 0.5em;
+      border-right: 1px solid var(--link-color);
+      border-left: 1px solid var(--link-color);
+  }
+
+  .show_title {
+     {# color: var(--link-color); #}
+  }
+</style>
+
+<p>
+  <a href="/">&larr; back</a>
+</p>
+<section>
+  <h1>🕋 shows</h1>
+</section>
+
+<section class="shows">
+  <h2>Upcoming dates:</h2>
+
+  {% if shows.upcoming.length == 0 %}
+    <p>There are no shows scheduled at the moment.</p>
+  {% else %}
+    <ol class="showList">
+      {% for show in shows.upcoming %}
+        <li class="show">
+          <div class="show_tags">
+            <div class="show_tag">{{ show.artistName }}</div>
+            <div class="show_tag">{{ show.category }}</div>
+          </div>
+
+          <div class="show_tags">
+            <div class="show_tag">
+              {% if show.link %}
+                <a href="{{ show.link }}">{{ show.title }}</a>
+              {% else %}
+                {{ show.title }}
+              {% endif %}
+            </div>
+          </div>
+          <div class="show_tags"><div class="show_tag">{{ show.date }}</div></div>
+          <div class="show_tags"><div class="show_tag">{{ show.location }}</div>
+        </li>
+      {% endfor %}
+    </ol>
+  {% endif %}
+
+  <h2>Past dates:</h2>
+
+  <ol class="showList">
+    {% for show in shows.past.reverse() %}
+      <li class="show">
+        <div class="show_tags">
+          <div class="show_tag">{{ show.category }}</div>
+          <div class="show_tag">{{ show.artistName }}</div>
+        </div>
+
+        <div class="show_tags">
+            <div class="show_tag show_title">
+              {% if show.link %}
+                <a href="{{ show.link }}">{{ show.title }}</a>
+              {% else %}
+                {{ show.title }}
+              {% endif %}
+            </div>
+          </div>
+        <div class="show_tags">
+          <div class="show_tag">{{ show.date }}</div>
+        </div>
+        <div class="show_tags">
+          <div class="show_tag">{{ show.location }}</div>
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+
+
+  <p>
+    I did my best to remember every show I've ever played. If you remember one that's missing, let me know!
+  </p>
+</section>
+
+<section>
+  <h2>Coldbrew Collective</h2>
+  <p>Coldbrew Collective was a visual duo consisting of Aashish Gadani and Bobby Azarbayejani.</p>
+  <p>
+    If you're looking for shows I did visuals for as part of Coldbrew Collective, you can find a full list on <a href="https://aashishgadani.com/cc_show_list.html">Aashish Gadani's website</a>.
+  </p>
+</section>
