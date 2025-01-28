@@ -2,16 +2,21 @@
 layout: main
 ---
 
-{% import 'components.njk' as components %}
+<style>
+  nav {
+    text-align: center;
+  }
 
-<section style="text-align: center">
-  <h1>🕋 miseryconfusion</h1>
-</section>
+  nav ul {
+    justify-content: center;
+  }
+</style>
+
+{% import 'components.njk' as components %} {% include 'nav.njk' %}
+
 <section class="links" style="margin-top: 24px">
   <div>
-    {% for link in links %}
-      {{ components.linkButton(link.name, link.url, link.image) }}
-    {% endfor %}
+    {% for link in links %} {{ components.linkButton(link.name, link.url,
+    link.image) }} {% endfor %}
   </div>
 </section>
-
