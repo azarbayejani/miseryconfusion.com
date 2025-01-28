@@ -6,6 +6,7 @@ import { DateTime } from "luxon";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("style.css");
+  eleventyConfig.addPassthroughCopy("js/imageMapResizer.min.js");
   eleventyConfig.addPassthroughCopy("_redirects");
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {

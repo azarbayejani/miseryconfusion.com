@@ -8,30 +8,29 @@ image: "/images/discogs-tempo-adjust-logo.png"
 
 {% import 'components.njk' as components %}
 
-
 <p>
   <a href="/">&larr; back</a>
 </p>
 <section class="header">
   <div class="header__logo-container">
-    <img
-      src="{{ image }}"
-      alt="{{ title }}"
-      class="header__logo--h1"
-    />
+    <img src="{{ image }}" alt="{{ title }}" class="header__logo--h1" />
   </div>
   <h1>{{ title }}</h1>
 </section>
 <section style="display: flex; flex-direction: column; align-items: center">
-  <p>
-    {{ description }}
-  </p>
+  <p>{{ description }}</p>
 
   <div>
-    {{ components.linkButton("Install on Chrome", "https://chromewebstore.google.com/detail/discogs-tempo-adjust/lifpcepdalajjkklljnfcjpjjjllfhha", "/images/chrome-icon.png", true) }}
-    {{ components.linkButton("Install on Firefox", "https://addons.mozilla.org/en-US/firefox/addon/discogs-tempo-adjust/", "/images/firefox-icon.png", true) }}
-    {{ components.linkButton("GitHub", "https://github.com/azarbayejani/bandcamp-tempo-adjust", "/images/github-icon.png", true) }}
-    {{ components.linkButton("Donate to support the project", "https://buymeacoffee.com/miseryconfusion", "/images/donate-icon.png", true) }}
+    {{ components.linkButton("Install on Chrome",
+    "https://chromewebstore.google.com/detail/discogs-tempo-adjust/lifpcepdalajjkklljnfcjpjjjllfhha",
+    "/images/chrome-icon.png", true) }} {{ components.linkButton("Install on
+    Firefox",
+    "https://addons.mozilla.org/en-US/firefox/addon/discogs-tempo-adjust/",
+    "/images/firefox-icon.png", true) }} {{ components.linkButton("GitHub",
+    "https://github.com/azarbayejani/bandcamp-tempo-adjust",
+    "/images/github-icon.png", true) }} {{ components.linkButton("Donate to
+    support the project", "https://buymeacoffee.com/miseryconfusion",
+    "/images/donate-icon.png", true) }}
   </div>
 
   <p>
@@ -46,6 +45,6 @@ image: "/images/discogs-tempo-adjust-logo.png"
   <img
     src="/images/discogs-tempo-adjust-screenshot.png"
     alt="Discogs Tempo Adjust screenshot"
-    class="screenshot"
+    class="full-width-image"
   />
 </section>

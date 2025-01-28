@@ -1,176 +1,224 @@
 :root {
-    /* Light Mode Colors */
-    --link-color: #ff8c00;        /* Orange */
-    --link-visited-color: #cc7000; /* Darker orange */
-    --link-hover-color: #ffa726;   /* Lighter, brighter orange */
-    --link-active-color: #b35900;  /* Even darker orange */
+  /* Light Mode Colors */
+  --link-color: #ff8c00; /* Orange */
+  --link-visited-color: #cc7000; /* Darker orange */
+  --link-hover-color: #ffa726; /* Lighter, brighter orange */
+  --link-active-color: #b35900; /* Even darker orange */
 
-    /* Dark Mode Colors */
-    --link-color-dark: #ffb74d;
-    --link-visited-color-dark: #e69500;
-    --link-hover-color-dark: #ffcc80;
-    --link-active-color-dark: #e67e00;
+  /* Dark Mode Colors */
+  --link-color-dark: #ffb74d;
+  --link-visited-color-dark: #e69500;
+  --link-hover-color-dark: #ffcc80;
+  --link-active-color-dark: #e67e00;
 
-    /* Backgrounds */
-    --background-light: #ffffff;
-    --background-dark: #0d1117;
+  /* Backgrounds */
+  --background-light: #ffffff;
+  --background-dark: #0d1117;
 }
 
 body {
-    max-width: 650px;
-    margin: 10px auto;
-    padding: 0 10px;
-    font: 18px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    color: #444;
+  max-width: 650px;
+  margin: 10px auto;
+  padding: 0 10px;
+  font: 18px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #444;
 }
 
 h1,
 h2,
 h3 {
-    line-height: 1.2;
+  line-height: 1.2;
 }
 
 a {
-    text-underline-offset: 0.1em;;
-    color: var(--link-color);
+  text-underline-offset: 0.1em;
+  color: var(--link-color);
 }
 
 a:visited {
-    color: var(--link-visited-color);
+  color: var(--link-visited-color);
 }
 
 a:hover {
-    color: var(--link-hover-color);
+  color: var(--link-hover-color);
 }
 
 a:active {
-    color: var(--link-active-color);
+  color: var(--link-active-color);
 }
 
-section {
-    padding: 10px 0;
-    border-bottom: 1px solid #c9d1d9;
-}
+nav {
+  padding: 10px 0;
+  border-bottom: 1px solid #c9d1d9;
 
-section:last-of-type {
-    border-bottom: none;
-}
+  h1 {
+    margin-bottom: 0;
+  }
 
-img {
-    max-width: 100%;
-}
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 0.6em;
+    font-size: 0.9em;
+  }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        color: #c9d1d9;
-        background: #0d1117;
-    }
+  a {
+    text-decoration: none;
+    color: var(--link-color);
+  }
 
+  a:visited {
+    color: var(--link-color);
+  }
+
+  a[aria-current="page"] {
+    color: var(--link-hover-color);
+  }
+
+  @media (prefers-color-scheme: dark) {
     a {
-        color: var(--link-color-dark);
+      color: var(--link-color-dark);
     }
 
     a:visited {
-        color: var(--link-visited-color-dark);
+      color: var(--link-color-dark);
     }
 
-    a:hover {
-        color: var(--link-hover-color-dark);
+    a[aria-current="page"] {
+      color: var(--link-hover-color);
     }
+  }
+}
 
-    a:active {
-        color: var(--link-active-color-dark);
-    }
+section {
+  padding: 10px 0;
+  border-bottom: 1px solid #c9d1d9;
+}
 
-    .inverted-on-dark {
-        filter: invert(.95);
-    }
+section:last-of-type {
+  border-bottom: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #c9d1d9;
+    background: #0d1117;
+  }
+
+  a {
+    color: var(--link-color-dark);
+  }
+
+  a:visited {
+    color: var(--link-visited-color-dark);
+  }
+
+  a:hover {
+    color: var(--link-hover-color-dark);
+  }
+
+  a:active {
+    color: var(--link-active-color-dark);
+  }
+
+  .inverted-on-dark {
+    filter: invert(0.95);
+  }
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }
 
 .header__logo-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .header__logo--h1 {
-    width: 48px;
-    height: 48px;
+  width: 48px;
+  height: 48px;
 }
 
 .header__logo--h3 {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .link-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  border-radius: 6px;
+
+  &:hover {
+    background: #eee;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+
+  .text {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: 1px solid #ccc;
-    padding: 12px;
-    margin-bottom: 8px;
-    text-decoration: none;
-    border-radius: 6px;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #444;
 
-    &:hover {
-        background: #eee;
-    }
+    flex-grow: 1;
+  }
 
-    .icon {
-        width: 24px;
-        height: 24px;
-        margin-right: 12px;
-    }
+  @media (prefers-color-scheme: dark) {
+    color: #c9d1d9;
+    background: #0d1117;
 
     .text {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        color: #444;
-
-        flex-grow: 1;
+      color: #c9d1d9;
     }
 
-    @media (prefers-color-scheme: dark) {
-        color: #c9d1d9;
-        background: #0d1117;
-
-        .text {
-            color: #c9d1d9;
-        }
-
-        &:hover {
-            background: #161b22;
-        }
+    &:hover {
+      background: #161b22;
     }
+  }
 
-    &[aria-disabled="true"] {
-        pointer-events: none;
-        opacity: 0.5;
-    }
+  &[aria-disabled="true"] {
+    pointer-events: none;
+    opacity: 0.5;
+  }
 }
 
 ul li {
-    margin-bottom: .25em;
+  margin-bottom: 0.25em;
 }
 
 .product-page {
-    display: flex; flex-direction: column
+  display: flex;
+  flex-direction: column;
 }
 
-.screenshot {
-    width: 100%;
-    height: auto;
+.full-width-image {
+  width: 100%;
+  height: auto;
 }

@@ -1,0 +1,12 @@
+<nav>
+  <h1>welcome to <a href="/" {% if page.url == '/' %} aria-current="page" {% endif %}>miseryconfusion</a></h1>
+  <ul class="nav-links">
+    <li>
+      <a href="/shows" {% if page.url == '/shows/' %} aria-current="page" {% endif %}>shows</a>
+    </li>
+    <li><a href="/music" {% if page.url == '/music/' %} aria-current="page" {% endif %}>music</a></li>
+    <li><a href="/projects" {% if page.url == '/projects/' %} aria-current="page" {% endif %}>projects</a></li>
+    {# <li><a href="/blog" {% if page.url == '/blog/' %} aria-current="page" {% endif %}>blog</li> #}
+    <li><a href="/about" {% if page.url == '/about/' %} aria-current="page" {% endif %}>about</a></li>
+  </ul>
+</nav>

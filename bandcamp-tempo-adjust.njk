@@ -11,30 +11,30 @@ image: "/images/bandcamp-tempo-adjust-logo.png"
 <p><a href="/">&larr; back</a></p>
 <section class="header">
   <div class="header__logo-container">
-    <img
-      src="{{ image }}"
-      alt="{{ title }}"
-      class="header__logo--h1"
-    />
+    <img src="{{ image }}" alt="{{ title }}" class="header__logo--h1" />
   </div>
   <h1>{{ title }}</h1>
 </section>
 <section style="display: flex; flex-direction: column; align-items: center">
-  <p>
-    {{ description }}
-  </p>
+  <p>{{ description }}</p>
 
   <div>
-    {{ components.linkButton("Install on Chrome", "https://chrome.google.com/webstore/detail/bandcamp-tempo-adjust/iniomjoihcjgakkfaebmcbnhmiobppel", "/images/chrome-icon.png", true) }}
-    {{ components.linkButton("Install on Firefox", "https://addons.mozilla.org/en-US/firefox/addon/bandcamp-tempo-adjust/", "/images/firefox-icon.png", true) }}
-    {{ components.linkButton("GitHub", "https://github.com/azarbayejani/bandcamp-tempo-adjust", "/images/github-icon.png", true) }}
-    {{ components.linkButton("Donate to support the project", "https://buymeacoffee.com/miseryconfusion", "/images/donate-icon.png", true) }}
+    {{ components.linkButton("Install on Chrome",
+    "https://chrome.google.com/webstore/detail/bandcamp-tempo-adjust/iniomjoihcjgakkfaebmcbnhmiobppel",
+    "/images/chrome-icon.png", true) }} {{ components.linkButton("Install on
+    Firefox",
+    "https://addons.mozilla.org/en-US/firefox/addon/bandcamp-tempo-adjust/",
+    "/images/firefox-icon.png", true) }} {{ components.linkButton("GitHub",
+    "https://github.com/azarbayejani/bandcamp-tempo-adjust",
+    "/images/github-icon.png", true) }} {{ components.linkButton("Donate to
+    support the project", "https://buymeacoffee.com/miseryconfusion",
+    "/images/donate-icon.png", true) }}
   </div>
 
   <p>
     You may also be interested in
-    <a href="/discogs-tempo-adjust">Discogs Tempo Adjust</a>, which is a
-    similar tool for Discogs.
+    <a href="/discogs-tempo-adjust">Discogs Tempo Adjust</a>, which is a similar
+    tool for Discogs.
   </p>
 </section>
 
@@ -43,7 +43,7 @@ image: "/images/bandcamp-tempo-adjust-logo.png"
   <img
     src="/images/bandcamp-tempo-adjust-screenshot.png"
     alt="Bandcamp Tempo Adjust screenshot"
-    class="screenshot"
+    class="full-width-image"
   />
 </section>
 
@@ -51,12 +51,10 @@ image: "/images/bandcamp-tempo-adjust-logo.png"
   <h2>Full feature list</h2>
   <ul>
     <li>
-      <strong>BPM adjustment:</strong> available on album, track, and
-      collection pages
+      <strong>BPM adjustment:</strong> available on album, track, and collection
+      pages
     </li>
-    <li>
-      <strong>BPM Detection:</strong> available on album and track pages
-    </li>
+    <li><strong>BPM Detection:</strong> available on album and track pages</li>
     <li>
       <strong>Purchase export:</strong> export your purchases with currency
       conversion to analyze your spending on Bandcamp
@@ -67,4 +65,3 @@ image: "/images/bandcamp-tempo-adjust-logo.png"
     </li>
   </ul>
 </section>
-

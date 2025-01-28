@@ -5,10 +5,6 @@ layout: main
 {% import 'components.njk' as components %}
 
 <style>
-  .shows {
-    {# text-align: center; #}
-  }
-
   .showList {
     list-style-type: none;
     margin: 0;
@@ -17,35 +13,28 @@ layout: main
 
   .show {
       margin-bottom: 2em;
-      {# text-align: center; #}
+      border-left: 2px solid var(--link-color);
+      padding-left: 1em;
   }
 
-  .show_tags {
+  .show_row {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      {# justify-content: center; #}
       gap: 0.5em;
+      margin-top: 0.25em;
   }
 
   .show_tag {
-      padding: 0.25em 0.5em;
-      border-radius: 0.5em;
-      border-right: 1px solid var(--link-color);
-      border-left: 1px solid var(--link-color);
-  }
-
-  .show_title {
-     {# color: var(--link-color); #}
+      padding: 0.1em 0.5em;
+      font-size: 0.7em;
+      border-radius: 0.25em;
+      border-right: 2px solid var(--link-color);
+      border-left: 2px solid var(--link-color);
   }
 </style>
 
-<p>
-  <a href="/">&larr; back</a>
-</p>
-<section>
-  <h1>🕋 shows</h1>
-</section>
+{% include 'nav.njk' %}
 
 <section class="shows">
   <h2>Upcoming dates:</h2>
@@ -56,13 +45,13 @@ layout: main
     <ol class="showList">
       {% for show in shows.upcoming %}
         <li class="show">
-          <div class="show_tags">
+          <div class="show_row">
             <div class="show_tag">{{ show.artistName }}</div>
             <div class="show_tag">{{ show.category }}</div>
           </div>
 
-          <div class="show_tags">
-            <div class="show_tag">
+          <div class="show_row">
+            <div>
               {% if show.link %}
                 <a href="{{ show.link }}">{{ show.title }}</a>
               {% else %}
@@ -70,8 +59,8 @@ layout: main
               {% endif %}
             </div>
           </div>
-          <div class="show_tags"><div class="show_tag">{{ show.date }}</div></div>
-          <div class="show_tags"><div class="show_tag">{{ show.location }}</div>
+          <div class="show_row">{{ show.date }}</div>
+          <div class="show_row"><div >{{ show.location }}</div>
         </li>
       {% endfor %}
     </ol>
@@ -82,13 +71,13 @@ layout: main
   <ol class="showList">
     {% for show in shows.past.reverse() %}
       <li class="show">
-        <div class="show_tags">
+        <div class="show_row">
           <div class="show_tag">{{ show.category }}</div>
           <div class="show_tag">{{ show.artistName }}</div>
         </div>
 
-        <div class="show_tags">
-            <div class="show_tag show_title">
+        <div class="show_row">
+            <div class="show_title">
               {% if show.link %}
                 <a href="{{ show.link }}">{{ show.title }}</a>
               {% else %}
@@ -96,11 +85,11 @@ layout: main
               {% endif %}
             </div>
           </div>
-        <div class="show_tags">
-          <div class="show_tag">{{ show.date }}</div>
+        <div class="show_row">
+          <div >{{ show.date }}</div>
         </div>
-        <div class="show_tags">
-          <div class="show_tag">{{ show.location }}</div>
+        <div class="show_row">
+          <div>{{ show.location }}</div>
         </div>
       </li>
     {% endfor %}
