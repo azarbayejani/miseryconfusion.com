@@ -768,6 +768,17 @@ export default function () {
     },
   ];
 
+  shows.forEach((artist) => {
+    artist.shows = artist.shows.map((show) => {
+      return {
+        ...show,
+        humanDate: DateTime.fromISO(show.date).toLocaleString(
+          DateTime.DATE_HUGE
+        ),
+      };
+    });
+  });
+
   return {
     upcoming: shows
       .reduce((acc, artist) => {
