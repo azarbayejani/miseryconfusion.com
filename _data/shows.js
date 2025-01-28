@@ -517,7 +517,7 @@ export default function () {
         },
         {
           title:
-            "Tapdup at WMUC Radio w/ Gab7, 'sighup', Drankay, and Permanent",
+            "Third Rail featuring Tapdup w/ Gab7, 'sighup', Drankay, and Permanent",
           date: "2012-12-02",
           venue: "WMUC Radio",
           location: "College Park, MD",
