@@ -3,10 +3,10 @@ import { DateTime } from "luxon";
 
 export default function (configData) {
   return {
-    layout: "main",
+    layout: "blog",
     permalink: function ({ title, page }) {
       if (!title) {
-        // don't do anything special
+        // don't do anything special (it's probably /index.njk)
         return;
       }
 

@@ -1,6 +1,7 @@
 import markdownItFootnote from "markdown-it-footnote";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { IdAttributePlugin } from "@11ty/eleventy";
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 
 import fs from "fs";
 import childProcess from "child_process";
@@ -13,7 +14,26 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("_redirects");
 
   // Add ID attributes to HTML elements
-  eleventyConfig.addPlugin(IdAttributePlugin);
+  // eleventyConfig.addPlugin(IdAttributePlugin);
+
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "atom",
+    outputPath: "/feed.xml",
+    collection: {
+      name: "blog", // iterate over `collections.blog`
+      limit: 0, // 0 means no limit
+    },
+    metadata: {
+      language: "en",
+      title: "miseryconfusion",
+      subtitle: "The blog of Bobby Azarbayejani (aka 'nohup')",
+      base: "https://miseryconfusion.com/",
+      author: {
+        name: "Bobby Azarbayejani",
+        email: "contact@miseryconfusion.com",
+      },
+    },
+  });
 
   // Image transforms
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
@@ -72,6 +92,8 @@ export default function (eleventyConfig) {
   // Formats a date object as e.g. October 17, 2022
   // use like {{ post.date | fullDate }}
   eleventyConfig.addFilter("fullDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_FULL);
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toLocaleString(
+      DateTime.DATE_FULL
+    );
   });
 }

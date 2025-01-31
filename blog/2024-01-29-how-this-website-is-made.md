@@ -3,8 +3,6 @@ title: How this website is made
 tags: blog
 ---
 
-# {{ title }}
-
 This website is built with [Eleventy](https://11ty.dev) (11ty), a **static site
 generator**, and hosted on Cloudflare Pages. The code, written in HTML, CSS,
 JavaScript, and the Nunjucks templating language, is available on
