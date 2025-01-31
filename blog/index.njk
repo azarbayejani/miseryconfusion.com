@@ -1,5 +1,4 @@
-<ul>
-  {% for post in collections.blog %}
-  <h1>{{post.data.title}}</h1>
-  {{ post.content | safe }} {% endfor %}
-</ul>
+{% for post in collections.blog %}
+  <h1>{{ post.data.title }}</h1>
+  {{ post.content | safe }}
+{% endfor %}

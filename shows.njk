@@ -12,25 +12,25 @@ layout: main
   }
 
   .show {
-      margin-bottom: 2em;
-      border-left: 2px solid var(--link-color);
-      padding-left: 1em;
+    margin-bottom: 2em;
+    border-left: 2px solid var(--link-color);
+    padding-left: 1em;
   }
 
   .show_row {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 0.5em;
-      margin-top: 0.25em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: 0.25em;
   }
 
   .show_tag {
-      padding: 0.1em 0.5em;
-      font-size: 0.7em;
-      border-radius: 0.25em;
-      border-right: 2px solid var(--link-color);
-      border-left: 2px solid var(--link-color);
+    padding: 0.1em 0.5em;
+    font-size: 0.7em;
+    border-radius: 0.25em;
+    border-right: 2px solid var(--link-color);
+    border-left: 2px solid var(--link-color);
   }
 </style>
 
@@ -58,7 +58,7 @@ layout: main
             </div>
           </div>
           <div class="show_row">{{ show.humanDate }}</div>
-          <div class="show_row"><div >{{ show.location }}</div>
+          <div class="show_row">{{ show.location }}</div>
         </li>
       {% endfor %}
     </ol>
@@ -75,16 +75,16 @@ layout: main
         </div>
 
         <div class="show_row">
-            <div class="show_title">
-              {% if show.link %}
-                <a href="{{ show.link }}">{{ show.title }}</a>
-              {% else %}
-                {{ show.title }}
-              {% endif %}
-            </div>
+          <div class="show_title">
+            {% if show.link %}
+              <a href="{{ show.link }}">{{ show.title }}</a>
+            {% else %}
+              {{ show.title }}
+            {% endif %}
           </div>
+        </div>
         <div class="show_row">
-          <div >{{ show.humanDate }}</div>
+          <div>{{ show.humanDate }}</div>
         </div>
         <div class="show_row">
           <div>{{ show.location }}</div>
@@ -93,16 +93,23 @@ layout: main
     {% endfor %}
   </ol>
 
-
   <p>
-    I did my best to remember every show I've ever played. If you remember one that's missing, let me know!
+    I did my best to remember every show I've ever played. If you remember one
+    that's missing, let me know!
   </p>
 </section>
 
 <section>
   <h2>Coldbrew Collective</h2>
-  <p>Coldbrew Collective was a visual duo consisting of Aashish Gadani and Bobby Azarbayejani.</p>
   <p>
-    If you're looking for shows I did visuals for as part of Coldbrew Collective, you can find a full list on <a href="https://aashishgadani.com/cc_show_list.html">Aashish Gadani's website</a>.
+    Coldbrew Collective was a visual duo consisting of Aashish Gadani and Bobby
+    Azarbayejani.
+  </p>
+  <p>
+    If you're looking for shows I did visuals for as part of Coldbrew
+    Collective, you can find a full list on
+    <a href="https://aashishgadani.com/cc_show_list.html"
+      >Aashish Gadani's website</a
+    >.
   </p>
 </section>
