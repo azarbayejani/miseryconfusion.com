@@ -1,6 +1,7 @@
 ---
 title: How this website is made
 tags: blog
+draft: true
 ---
 
 This website is built with [Eleventy](https://11ty.dev) (11ty), a **static site

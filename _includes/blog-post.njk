@@ -1,0 +1,17 @@
+---
+layout: main
+---
+
+<article>
+  {% if title %}
+    <header>
+      <h1>{{ title }}</h1>
+      <div class="date">
+        Posted on {{ page.date | fullDate }} by
+        <a href="/about">miseryconfusion</a>
+      </div>
+    </header>
+  {% endif %}
+
+  {{ content | safe }}
+</article>

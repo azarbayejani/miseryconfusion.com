@@ -1,5 +1,5 @@
 <nav>
-  <h1>
+  <h1 class="logo">
     welcome to
     <a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}
       >miseryconfusion</a
@@ -27,7 +27,10 @@
         >projects</a
       >
     </li>
-    {# <li><a href="/blog" {% if page.url.startsWith('/blog/') %} aria-current="page" {% endif %}>blog</li> #}
+    <li><a href="/blog" {% if page.url.startsWith('/blog/') %} aria-current="page" {% endif %}>blog</li>
+    <li style="display: flex; align-items: center;">
+      <a href="/feed.xml" target="_blank" rel="noopener noreferrer">rss</a>
+    </li>
     <li>
       <a
         href="/about"

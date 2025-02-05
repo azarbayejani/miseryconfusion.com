@@ -1,4 +1,19 @@
+---
+layout: main
+---
+
 {% for post in collections.blog %}
-  <h1>{{ post.data.title }}</h1>
-  {{ post.content | safe }}
+  <article>
+    <header>
+      <h1>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </h1>
+      <div class="date">
+        Posted on {{ post.date | fullDate }} by
+        <a href="/about">miseryconfusion</a>
+      </div>
+    </header>
+    {{ post.templateContent | safe }}
+  </article>
+  {% if not loop.last %}<hr />{% endif %}
 {% endfor %}

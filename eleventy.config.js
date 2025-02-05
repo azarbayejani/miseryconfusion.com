@@ -13,8 +13,19 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("js/imageMapResizer.min.js");
   eleventyConfig.addPassthroughCopy("_redirects");
 
+  // Ignore drafts
+  eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+    if (
+      data.draft &&
+      (process.env.ELEVENTY_RUN_MODE === "build" ||
+        process.env.PREVIEW_PROD === "true")
+    ) {
+      return false;
+    }
+  });
+
   // Add ID attributes to HTML elements
-  // eleventyConfig.addPlugin(IdAttributePlugin);
+  eleventyConfig.addPlugin(IdAttributePlugin);
 
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
@@ -37,12 +48,12 @@ export default function (eleventyConfig) {
 
   // Image transforms
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    formats: ["png", "svg"],
+    formats: ["png"],
   });
 
   // Markdown
   eleventyConfig.amendLibrary("md", (mdLibrary) =>
-    mdLibrary.use(markdownItFootnote)
+    mdLibrary.use(markdownItFootnote),
   );
 
   // Add a shortcode to get the last commit date in DATE_FULL format
@@ -52,7 +63,7 @@ export default function (eleventyConfig) {
       .toString()
       .trim();
     const formattedDate = DateTime.fromISO(lastUpdatedFromGit).toLocaleString(
-      DateTime.DATE_FULL
+      DateTime.DATE_FULL,
     );
     return formattedDate;
   });
@@ -93,7 +104,7 @@ export default function (eleventyConfig) {
   // use like {{ post.date | fullDate }}
   eleventyConfig.addFilter("fullDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toLocaleString(
-      DateTime.DATE_FULL
+      DateTime.DATE_FULL,
     );
   });
 }

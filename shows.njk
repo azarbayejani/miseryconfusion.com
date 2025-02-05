@@ -26,11 +26,13 @@ layout: main
   }
 
   .show_tag {
-    padding: 0.1em 0.5em;
-    font-size: 0.7em;
-    border-radius: 0.25em;
+    padding-right: 0.5em;
+    font-size: 0.75em;
     border-right: 2px solid var(--link-color);
-    border-left: 2px solid var(--link-color);
+  }
+
+  .show_tag:last-child {
+    border-right: none;
   }
 </style>
 
@@ -44,8 +46,8 @@ layout: main
       {% for show in shows.upcoming %}
         <li class="show">
           <div class="show_row">
-            <div class="show_tag">{{ show.artistName }}</div>
             <div class="show_tag">{{ show.category }}</div>
+            <div class="show_tag">{{ show.artistName }}</div>
           </div>
 
           <div class="show_row">
