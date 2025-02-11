@@ -12,6 +12,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("style.css");
   eleventyConfig.addPassthroughCopy("js/imageMapResizer.min.js");
   eleventyConfig.addPassthroughCopy("_redirects");
+  eleventyConfig.addPassthroughCopy("_headers");
 
   // Ignore drafts
   eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
