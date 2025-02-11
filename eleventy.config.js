@@ -29,7 +29,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
-    outputPath: "/feeds/main",
+    outputPath: "/feed.xml",
     collection: {
       name: "blog", // iterate over `collections.blog`
       limit: 0, // 0 means no limit
