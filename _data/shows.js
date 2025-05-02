@@ -8,6 +8,33 @@ export default function () {
       description: "'nohup' is my primary DJ and production alias since 2018.",
       shows: [
         {
+          title: "System Activate",
+          date: "2025-08-23",
+          venue: "The Forest",
+          location: "Central Vermont",
+          category: "DJ",
+          artistName: "'nohup'",
+          link: "https://systemactivate.com",
+        },
+        {
+          title: "'nohup' & Seelene",
+          date: "2025-05-02",
+          venue: "Afterlife",
+          location: "Seattle, WA",
+          category: "DJ",
+          artistName: "'nohup'",
+          link: "https://ra.co/events/2160644",
+        },
+        {
+          title: "Lotion presents: II Toner with x3Butterfly, Succubass, and Backandbodyhertz",
+          date: "2025-04-26",
+          venue: "Private location",
+          location: "Seattle, WA",
+          category: "DJ",
+          artistName: "'nohup'",
+          link: "https://ra.co/events/2153298",
+        },
+        {
           title: "Kremwerk 11 Year Anniversary",
           date: "2025-02-22",
           venue: "Kremwerk complex",
