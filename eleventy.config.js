@@ -13,6 +13,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("js/imageMapResizer.min.js");
   eleventyConfig.addPassthroughCopy("_redirects");
   eleventyConfig.addPassthroughCopy("_headers");
+  eleventyConfig.addPassthroughCopy("images/*.mp4");
 
   // Ignore drafts
   eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
@@ -81,6 +82,16 @@ export default function (eleventyConfig) {
     return this.page?.inputPath
       ? fs.statSync(this.page.inputPath).mtime
       : undefined;
+  });
+
+  eleventyConfig.addFilter("sortDataByDate", (obj) => {
+    const sorted = {};
+    Object.keys(obj)
+      .sort((a, b) => {
+        return obj[a].date > obj[b].date ? 1 : -1;
+      })
+      .forEach((name) => (sorted[name] = obj[name]));
+    return sorted;
   });
 
   // Add a ?v=timestamp to the end of any url to bust the cache

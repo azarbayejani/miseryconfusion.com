@@ -2,7 +2,7 @@
 layout: main
 ---
 
-{% for post in collections.blog %}
+{% for post in collections.blog | reverse %}
   <article>
     <header>
       <h1>
