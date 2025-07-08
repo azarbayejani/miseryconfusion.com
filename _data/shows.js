@@ -17,6 +17,15 @@ export default function () {
           link: "https://systemactivate.com",
         },
         {
+          title: "'nohup' with Bad Luck and THC.XLR",
+          date: "2025-06-26",
+          venue: "Baba Yaga",
+          location: "Seattle, WA",
+          category: "liveset",
+          artistName: "'nohup'",
+          link: "https://tickets.venuepilot.com/e/nohup-with-bad-luck-and-thc-xlr-2025-06-26-baba-yaga-seattle-560821",
+        },
+        {
           title: "'nohup' & Seelene",
           date: "2025-05-02",
           venue: "Afterlife",
