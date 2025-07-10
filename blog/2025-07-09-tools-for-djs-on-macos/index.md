@@ -1,5 +1,6 @@
 ---
 title: Don't Get Fooled By Fake Lossless Files Again
+subtitle: How I use MacOS Quick Actions to convert files and detect transcodes
 tags: blog
 date: 2025-07-09
 ---
@@ -11,7 +12,7 @@ right-click a file, click "Get Spectrogram" and watch an image like the one
 above appear on my screen. I had just downloaded a file from Soulseek[^1] and
 wanted to verify whether the purported AIFF file was actually legitimate or a
 bad transcode. Once I confirmed it was genuine, I right-clicked again and
-converted it to 320kbps MP3. 
+converted it to 320kbps MP3—all without leaving Finder.
 
 I had achieved this by using a feature of macOS called "Quick Actions". [Quick
 Actions](https://support.apple.com/guide/automator/use-quick-action-workflows-aut73234890a/mac),
@@ -21,6 +22,8 @@ folders, or text, and can even have keyboard shortcuts assigned to them.
 They're extremely powerful tools that allow me to do all kinds of tasks on my
 computer. As a DJ and music collector, I use Quick Actions to help me convert
 files and verify if the files I have are what they claim to be.
+
+If you already know what transcodes are and how you can detect them, skip ahead to the [installation guide](#installation-guide).
 
 ## Why audio quality matters for DJs
 
@@ -97,7 +100,7 @@ format. To speed up this workflow, I have created 3 Quick Actions:
 
 ## Installation guide 
 
-These quick actions require [`sox`](https://en.wikipedia.org/wiki/SoX) and [`ffmpeg`](https://ffmpeg.org/) to be installed on your computer before you can use them.
+This installation guide will walk you through how to install [`sox`](https://en.wikipedia.org/wiki/SoX) and [`ffmpeg`](https://ffmpeg.org/). If you already have these installed or have a preferred way to install command line tools, you can skip ahead to [Install The Quick Actions](#install-the-quick-actions).
 
 ### Caveats:
 
@@ -121,17 +124,22 @@ Terminal.
 
 To install Homebrew, run this command in your Terminal:
 
-<code>
+```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-</code>
-
+```
 ### Installing `ffmpeg` and `sox`
+
+[`ffmpeg`](https://ffmpeg.org/) is a software package that allows users to
+convert and modify audio and video files. The Convert to MP3 and Convert to
+AIFF scripts use it.
+
+[`sox`](https://en.wikipedia.org/wiki/SoX) or Sound eXchange is an audio editing software. It is what we use to generate the 
 
 In Terminal, run this command.
 
-<code>
+```
 brew install ffmpeg sox
-</code>
+```
 
 ### Install the Quick Actions
 
