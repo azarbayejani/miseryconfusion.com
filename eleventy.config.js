@@ -14,6 +14,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("_redirects");
   eleventyConfig.addPassthroughCopy("_headers");
   eleventyConfig.addPassthroughCopy("images/*.mp4");
+  eleventyConfig.addPassthroughCopy({ "blog/**/images/*.png": "blog/images" });
 
   // Ignore drafts
   eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
@@ -53,10 +54,22 @@ export default function (eleventyConfig) {
     formats: ["png"],
   });
 
+  function render_footnote_anchor_name (tokens, idx, options, env/*, slf */) {
+    const n = Number(tokens[idx].meta.id + 1).toString()
+    let prefix = ''
+
+     // Add file's slug as a prefix so that we don't have duplicate tokens
+    if (typeof env?.page?.fileSlug === 'string') prefix = `-${env.page.fileSlug}-`
+
+    return prefix + n
+  }
+
   // Markdown
-  eleventyConfig.amendLibrary("md", (mdLibrary) =>
-    mdLibrary.use(markdownItFootnote),
-  );
+  eleventyConfig.amendLibrary("md", (mdLibrary) => {
+    const md = mdLibrary.use(markdownItFootnote);
+    md.renderer.rules.footnote_anchor_name = render_footnote_anchor_name;
+    return md;
+  });
 
   // Add a shortcode to get the last commit date in DATE_FULL format
   eleventyConfig.addShortcode("lastCommitDate", function () {
@@ -119,4 +132,5 @@ export default function (eleventyConfig) {
       DateTime.DATE_FULL,
     );
   });
+
 }
