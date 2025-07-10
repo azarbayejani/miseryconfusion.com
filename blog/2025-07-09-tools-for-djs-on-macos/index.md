@@ -135,7 +135,8 @@ To install Homebrew, run this command in your Terminal:
 convert and modify audio and video files. The Convert to MP3 and Convert to
 AIFF scripts use it.
 
-[`sox`](https://en.wikipedia.org/wiki/SoX) or Sound eXchange is an audio editing software. It is what we use to generate the 
+[`sox`](https://en.wikipedia.org/wiki/SoX) or Sound eXchange is an audio
+editing software. It is what we use to generate the spectrogram.
 
 In Terminal, run this command.
 
