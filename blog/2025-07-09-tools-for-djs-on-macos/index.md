@@ -1,6 +1,8 @@
 ---
 title: Don't Get Fooled By Fake Lossless Files Again
 subtitle: How I use MacOS Quick Actions to convert files and detect transcodes
+description: How I use MacOS Quick Actions to convert files and detect transcodes
+image: https://miseryconfusion.com/blog/2025-07-09-tools-for-djs-on-macos/images/finder-and-spectrogram.png
 tags: blog
 date: 2025-07-09
 ---
