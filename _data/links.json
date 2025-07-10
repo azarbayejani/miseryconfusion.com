@@ -25,8 +25,13 @@
     "image": "/images/discogs-tempo-adjust-logo.png"
   },
   {
+    "name": "Blog",
+    "url": "/blog",
+    "image": "/images/kaaba-emoji.png"
+  },
+  {
     "name": "Bluesky",
-    "url": "https://bsky.app/profile/miseryconfusion.bsky.social",
+    "url": "https://bsky.app/profile/miseryconfusion.com",
     "image": "/images/bluesky.svg"
   },
   {
