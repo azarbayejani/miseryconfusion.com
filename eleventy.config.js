@@ -6,6 +6,9 @@ import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import fs from "fs";
 import childProcess from "child_process";
 import { DateTime } from "luxon";
+import * as cheerio from "cheerio";
+
+const WEBSITE_URL = "https://miseryconfusion.com";
 
 export default function (eleventyConfig) {
   // Copy static files
@@ -54,14 +57,15 @@ export default function (eleventyConfig) {
     formats: ["png"],
   });
 
-  function render_footnote_anchor_name (tokens, idx, options, env/*, slf */) {
-    const n = Number(tokens[idx].meta.id + 1).toString()
-    let prefix = ''
+  function render_footnote_anchor_name(tokens, idx, options, env /*, slf */) {
+    const n = Number(tokens[idx].meta.id + 1).toString();
+    let prefix = "";
 
-     // Add file's slug as a prefix so that we don't have duplicate tokens
-    if (typeof env?.page?.fileSlug === 'string') prefix = `-${env.page.fileSlug}-`
+    // Add file's slug as a prefix so that we don't have duplicate tokens
+    if (typeof env?.page?.fileSlug === "string")
+      prefix = `-${env.page.fileSlug}-`;
 
-    return prefix + n
+    return prefix + n;
   }
 
   // Markdown
@@ -133,4 +137,24 @@ export default function (eleventyConfig) {
     );
   });
 
+  eleventyConfig.addTransform("og-image", function (content, outputPath) {
+    console.log(outputPath);
+    if (outputPath && outputPath.endsWith(".html")) {
+      const $ = cheerio.load(content);
+      const $ogImage = $("img.og-image");
+
+      // Don't modify if no og-image
+      if ($ogImage.length === 0) return content;
+
+      $("head")
+        .find('meta[name="og:image"]')
+        .replaceWith(
+          `<meta name="og:image" content="${WEBSITE_URL}${$ogImage.attr("src")}">`,
+        );
+      return $.html();
+    }
+
+    // Don't modify otherwise
+    return content;
+  });
 }
