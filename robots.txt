@@ -1,0 +1,4 @@
+Sitemap: https://miseryconfusion.com/sitemap.xml
+
+User-agent: *
+Disallow:

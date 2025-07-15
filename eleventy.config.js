@@ -16,6 +16,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("js/imageMapResizer.min.js");
   eleventyConfig.addPassthroughCopy("_redirects");
   eleventyConfig.addPassthroughCopy("_headers");
+  eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("images/*.mp4");
   eleventyConfig.addPassthroughCopy({ "blog/**/images/*.png": "blog/images" });
 
