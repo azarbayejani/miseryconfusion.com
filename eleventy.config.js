@@ -19,6 +19,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("images/*.mp4");
   eleventyConfig.addPassthroughCopy({ "blog/**/images/*.png": "blog/images" });
+  eleventyConfig.addPassthroughCopy({ "images/favicon": "/" });
 
   eleventyConfig.addGlobalData("site.url", WEBSITE_URL);
 
