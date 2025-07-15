@@ -20,6 +20,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("images/*.mp4");
   eleventyConfig.addPassthroughCopy({ "blog/**/images/*.png": "blog/images" });
 
+  eleventyConfig.addGlobalData("site.url", WEBSITE_URL);
+
   // Ignore drafts
   eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
     if (
