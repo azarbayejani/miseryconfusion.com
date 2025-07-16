@@ -155,7 +155,7 @@ brew install ffmpeg sox
 Quick Actions can be edited and installed in the Automator app, which is
 installed by default on Mac.
 
-[You can download the Quick Actions here](https://www.dropbox.com/scl/fi/ia8hn2e4wfdy88kbqq7ch/automator-actions-for-djs.zip?rlkey=8p8qm84w060hman042p51i4fb&dl=0).
+[You can download the Quick Actions here](/files/automator-actions-for-djs.zip).
 If you're not on macOS and would just like to use the scripts, you can copy them
 from
 [this GitHub Gist](https://gist.github.com/azarbayejani/40be9d307efb83545f52decaa6945730).
