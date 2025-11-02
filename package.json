@@ -23,5 +23,8 @@
   },
   "devDependencies": {
     "prettier-plugin-jinja-template": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
