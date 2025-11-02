@@ -124,6 +124,13 @@ Stuff can go wrong if you do this. AlphaTheta notes:
 > \> firmware update failed] or [PANEL firmware update failed] appears, contact
 > our customer support center.
 
+## A note to clubs and promoters
+
+Hold off on upgrading the firmware of your CDJ-3000s for now! You don't want
+your talent to be caught off guard by this. Hopefully AlphaTheta will put out an
+update that handles this better, or at least people will slowly become aware of
+these compatibility issues.
+
 ## Stay Prepared
 
 The CDJ-3000 firmware situation is a reminder that even routine updates can
@@ -142,7 +149,7 @@ try.
 
 ---
 
-[Email me](nohup@miseryconfusion.com) if you have any corrections or new
+[Email me](mailto:nohup@miseryconfusion.com) if you have any corrections or new
 discoveries, and [buy me a coffee](https://buymeacoffee.com/miseryconfusion) if
 this helped you.
 
