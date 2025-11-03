@@ -39,7 +39,8 @@ Without a CDJ-3000 to test this on, I can only go by what I'm seeing online, but
 from what I understand, there are two ways to get yourself out of this DJ
 nightmare if it happens to you:
 
-1. Be prepared with Device Library Plus on your USB
+1. Be prepared with Device Library Plus on your USB (or ask to borrow someone's
+   laptop)
 2. Carry around a copy of the CDJ-3000 v3.20 firmware (the last compatible
    version) so you can downgrade club equipment
 
@@ -57,11 +58,11 @@ held off on upgrading Rekordbox as AlphaTheta enshittifies it with
 subscription-supported junk, but at least there's a version of Rekordbox 6 that
 supports Device Library Plus.
 
-Device Library Plus **does not** actually duplicate the files on your USB, it
-just creates a new library file that links to your files on your USB. With
-AlphaTheta's transition to OneLibrary, it looks like Device Library Plus is now
-becoming the default on new Pioneer CDJ devices, including CDJ-3000 and
-CDJ-3000X.
+Device Library Plus **does not** duplicate the files on your USB, it just
+creates a new library file that links to your files on your USB. Both Device
+Library and Device Library Plus can coexist on the same USB. With AlphaTheta's
+transition to OneLibrary, it looks like Device Library Plus is now becoming the
+default on new Pioneer CDJ devices, including the CDJ-3000 and CDJ-3000X.
 
 All you need to do to use Device Library Plus is export from version 6.8.2 or
 later of Rekordbox. Also note that you can actually run multiple versions of
@@ -71,19 +72,35 @@ Rekordbox.
 
 [Download old versions of Rekordbox 6 here](https://rekordbox.com/en/support/faq/v6/#faq-q600141)
 
-Personally, I think this is a better solution than downgrading the CDJ firmware,
-as it will guarantee your USB works on Pioneer's new CDJ-3000X, which ONLY
-supports OneLibrary / Device Library Plus. You may start seeing more of these in
-clubs.
+You can set up your existing USB with Device Library by plugging it into _any_
+laptop with Rekordbox 6.8.2 or greater. Rekordbox will prompt you if you want to
+upgrade to Device Library Plus, or alternatively you can go to the Devices
+section of Rekordbox, expand your USB, and click on "Convert From Device
+Library". Conversion should take less than a minute and will keep your existing
+Device Library around. This can be great in a pinch because you can just ask a
+friend or the someone at the venue if they have a laptop, quickly install
+Rekordbox, and be ready to go in just a few minutes.
+
+<img src="/blog/2025-11-02-dont-let-cdj-3000-firmware-ruin-your-gig/images/convert-from-device-library.png" alt="A screenshot of a device in Rekordbox with Convert From Device Library right clicked" style="height: auto; margin-top: 8px; margin-bottom: 0;" />
+
+<small>Thanks to [@raihan](https://x.com/rxdazn/status/1985155678495981600) and
+[@djbigpeach](https://www.instagram.com/djbigpeach) for sharing this
+approach!</small>
+
+Personally, I think being prepared with Device Library Plus is a better solution
+than downgrading the CDJ firmware, as it will guarantee your USB works on
+Pioneer's new CDJ-3000X, which ONLY supports OneLibrary / Device Library Plus.
+You may start seeing more of these in clubs.
 
 ## Carry around a downgrade on your USB
 
 <div style="display: flex; border: 1px #ffc107 solid; background: #ffc107; margin-top: 12px; border-radius: 4px; padding: 8px; color: var(--text-light);">
-  <img src="/blog/2025-11-02-dont-let-cdj-3000-firmware-ruin-your-gig/images/dummies-guy.png" style="height: 100%; max-height: 75px;" alt="for dummies guy">
+  <img src="/blog/2025-11-02-dont-let-cdj-3000-firmware-ruin-your-gig/images/dummies-guy.png" style="height: 100%; max-height: 75px;" alt="For Dummies mascot">
   <div>
     <strong>CAUTION:</strong> Be careful when doing this on club hardware you don't
     own! Following these instructions incorrectly could cause you to brick a club's
-    equipment right before you're supposed to play.
+    equipment right before you're supposed to play. I would recommend just using Device
+    Library Plus.
   </div>
 </div>
 
@@ -97,9 +114,9 @@ downgrade file. I've uploaded it to
 
 Extract the zip file to the root directory of your USB. It should be a file
 named CDJ3Kv320.UPD. Keep this file on your USB should you need to downgrade a
-CDJ-3000 in an emergency. This can even be your USB that contains your music!
-However, your USB **must** be formatted with FAT or FAT32 for the downgrade to
-work.
+CDJ-3000 in an emergency. This can even be on the same USB that contains your
+music! However, your USB **must** be formatted with FAT or FAT32 for the
+downgrade to work.
 
 I've copied the
 [firmware update instructions](https://www.pioneerdj.com/-/media/pioneerdj/downloads/firmwares/players/cdj-3000/cdj-3000_updateguide-en.pdf)
@@ -129,7 +146,7 @@ Stuff can go wrong if you do this. AlphaTheta notes:
 Hold off on upgrading the firmware of your CDJ-3000s for now! You don't want
 your talent to be caught off guard by this. Hopefully AlphaTheta will put out an
 update that handles this better, or at least people will slowly become aware of
-these compatibility issues.
+these compatibility issues and upgrade to Device Library Plus.
 
 ## Stay Prepared
 
