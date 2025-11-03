@@ -78,7 +78,7 @@ clubs.
 
 ## Carry around a downgrade on your USB
 
-<div style="display: flex; align-items: stretch; border: 1px red solid; background: #ffc107; margin-top: 12px; border-radius: 4px; padding: 8px;">
+<div style="display: flex; border: 1px #ffc107 solid; background: #ffc107; margin-top: 12px; border-radius: 4px; padding: 8px; color: var(--text-light);">
   <img src="/blog/2025-11-02-dont-let-cdj-3000-firmware-ruin-your-gig/images/dummies-guy.png" style="height: 100%; max-height: 75px;" alt="for dummies guy">
   <div>
     <strong>CAUTION:</strong> Be careful when doing this on club hardware you don't
