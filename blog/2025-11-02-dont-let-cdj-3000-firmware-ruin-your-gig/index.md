@@ -12,6 +12,16 @@ date: 2025-11-02
 
 <img src="/blog/2025-11-02-dont-let-cdj-3000-firmware-ruin-your-gig/images/cdj-3000-doom.jpg" alt="A CDJ-3000 'running doom'" style="height: auto; margin-top: 8px;" class="og-image" />
 
+<div style="display: flex; border: 1px #ffc107 solid; background: #ffc107; margin-top: 12px; border-radius: 4px; padding: 8px; color: var(--text-light); align-items: center;">
+  <img src="/blog/2025-11-02-dont-let-cdj-3000-firmware-ruin-your-gig/images/dummies-guy.png" style="height: 75px; width: auto;" alt="For Dummies mascot">
+  <div>
+    <strong>UPDATE:</strong> Alphatheta has suspended distribution of CDJ-3000 firmware v3.30 and
+    issued a
+<a style="color: var(--text-light);" href="https://alphatheta.com/en/information/important-notice-cdj-3000-firmware-ver330/">press release</a>
+recommending users to <a style="color: var(--text-light);" href="#carry-around-a-downgrade-on-your-usb">downgrade</a>.
+  </div>
+</div>
+
 Just in time for Halloween weekend,
 [stories](https://xcancel.com/Modestep/status/1984567287202861299) have started
 circulating on social media about my biggest nightmare as a DJ. You show up to a
@@ -94,8 +104,8 @@ You may start seeing more of these in clubs.
 
 ## Carry around a downgrade on your USB
 
-<div style="display: flex; border: 1px #ffc107 solid; background: #ffc107; margin-top: 12px; border-radius: 4px; padding: 8px; color: var(--text-light);">
-  <img src="/blog/2025-11-02-dont-let-cdj-3000-firmware-ruin-your-gig/images/dummies-guy.png" style="height: 100%; max-height: 75px;" alt="For Dummies mascot">
+<div style="display: flex; border: 1px #ffc107 solid; background: #ffc107; margin-top: 12px; border-radius: 4px; padding: 8px; color: var(--text-light); align-items: center;">
+  <img src="/blog/2025-11-02-dont-let-cdj-3000-firmware-ruin-your-gig/images/dummies-guy.png" style="height: 75px; width: auto;" alt="For Dummies mascot">
   <div>
     <strong>CAUTION:</strong> Be careful when doing this on club hardware you don't
     own! Following these instructions incorrectly could cause you to brick a club's
