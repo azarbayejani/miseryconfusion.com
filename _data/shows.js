@@ -8,6 +8,53 @@ export default function () {
       description: "'nohup' is my primary DJ and production alias since 2018.",
       shows: [
         {
+          title: "Purelink (live) with 'nohup' (live), Hünter",
+          date: "2026-01-22",
+          venue: "Substation",
+          location: "Seattle, WA",
+          category: "liveset",
+          artistName: "'nohup'",
+          link: "https://www.eventbrite.com/e/purelink-tickets-1974957570257",
+        },
+        {
+          title: "'nohup', THC.XLR, and Travel Agent at Add-a-Ball",
+          date: "2026-01-15",
+          venue: "Add-a-Ball",
+          location: "Seattle, WA",
+          category: "liveset",
+          artistName: "'nohup'",
+          link: "https://tickets.venuepilot.com/e/thc-xlr-2026-01-15-add-a-ball-amusements-seattle-428891",
+        },
+        {
+          title: "Research: CCL + 'nohup'",
+          date: "2025-12-27",
+          venue: "Private location",
+          location: "Seattle, WA",
+          category: "DJ",
+          artistName: "'nohup'",
+          link: "https://researchseattle.com/products/12-27-25-ccl-nohup",
+        },
+        {
+          title: "Trainspotting (rave)",
+          date: "2025-11-20",
+          venue: "Timbre Room",
+          location: "Seattle, WA",
+          category: "DJ",
+          artistName: "'nohup'",
+          link: "https://www.kremwerk.com/upcoming/2025/11/20/trainspotting-rave",
+        },
+        {
+          title:
+            "Rollercoaster of Dubs presents \"Enron's Ride of Broken Dreams\" with Market Failure, Jennifer Spektor, and 'nohup'",
+          date: "2025-09-19",
+          venue: "Timbre Room",
+          location: "Seattle, WA",
+          venue: "Timbre Room",
+          category: "DJ",
+          artistName: "'nohup'",
+          link: "https://www.kremwerk.com/upcoming/2025/09/19/rollercoaster-of-dubs",
+        },
+        {
           title: "System Activate",
           date: "2025-08-23",
           venue: "The Forest",
@@ -35,7 +82,8 @@ export default function () {
           link: "https://ra.co/events/2160644",
         },
         {
-          title: "Lotion presents: II Toner with x3Butterfly, Succubass, and Backandbodyhertz",
+          title:
+            "Lotion presents: II Toner with x3Butterfly, Succubass, and Backandbodyhertz",
           date: "2025-04-26",
           venue: "Private location",
           location: "Seattle, WA",
