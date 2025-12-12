@@ -9,7 +9,7 @@ export default function () {
       shows: [
         {
           title: "Purelink (live) with 'nohup' (live), Hünter",
-          date: "2026-01-22",
+          date: "2026-02-10",
           venue: "Substation",
           location: "Seattle, WA",
           category: "liveset",
