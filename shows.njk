@@ -13,8 +13,9 @@ layout: main
 
   .show {
     margin-bottom: 2em;
-    border-left: 2px solid var(--link-color);
-    padding-left: 1em;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 12px;
   }
 
   .show_row {
@@ -26,9 +27,11 @@ layout: main
   }
 
   .show_tag {
-    padding-right: 0.5em;
+    padding: 0.5em;
     font-size: 0.75em;
-    border-right: 2px solid var(--link-color);
+    background: var(--link-color);
+    color: var(--background-dark);
+    border-radius: 0.5em;
   }
 
   .show_tag:last-child {
@@ -60,6 +63,9 @@ layout: main
             </div>
           </div>
           <div class="show_row">{{ show.humanDate }}</div>
+          {% if show.venue %}
+            <div class="show_row">{{ show.venue }}</div>
+          {% endif %}
           <div class="show_row">{{ show.location }}</div>
         </li>
       {% endfor %}
@@ -88,6 +94,9 @@ layout: main
         <div class="show_row">
           <div>{{ show.humanDate }}</div>
         </div>
+        {% if show.venue %}
+          <div class="show_row">{{ show.venue }}</div>
+        {% endif %}
         <div class="show_row">
           <div>{{ show.location }}</div>
         </div>
