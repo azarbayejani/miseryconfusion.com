@@ -1,10 +1,10 @@
-{% macro linkButton(text, link, image, newTab=false) %}
+{% macro linkButton(text, link, image, imgClasses="", newTab=true) %}
   <a
     href="{{ link }}"
     class="link-button"
     {% if newTab %}target="_blank"{% endif %}
   >
-    <img src="{{ image }}" alt="{{ text }}" class="icon" />
+    <img src="{{ image }}" alt="{{ text }}" class="icon {{ imgClasses }}" />
     <div class="text">{{ text }}</div>
   </a>
 {% endmacro %}

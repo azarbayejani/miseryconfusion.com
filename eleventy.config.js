@@ -143,7 +143,6 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addTransform("og-image", function (content, outputPath) {
-    console.log(outputPath);
     if (outputPath && outputPath.endsWith(".html")) {
       const $ = cheerio.load(content);
       const $ogImage = $("img.og-image");

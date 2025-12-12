@@ -1,5 +1,15 @@
 [
   {
+    "name": "'nohup' with THC.XLR and Travel Agent at Add-a-Ball - Thu, Jan 15",
+    "url": "https://tickets.venuepilot.com/e/thc-xlr-2026-01-15-add-a-ball-amusements-seattle-428891",
+    "image": "/images/2026-01-15-add-a-ball.png"
+  },
+  {
+    "name": "Purelink Tickets - Tue, Feb 10",
+    "url": "https://www.eventbrite.com/e/purelink-tickets-1974957570257",
+    "image": "/images/purelink.png"
+  },
+  {
     "name": "Mantissa Mix 365: 'nohup'",
     "url": "https://soundcloud.com/mantissa1/mantissa-mix-365-nohup",
     "image": "/images/MantissaMix365_nohup.JPG"
@@ -22,6 +32,7 @@
   {
     "name": "Discogs Tempo Adjust",
     "url": "/discogs-tempo-adjust",
+    "imgClasses": "invert-on-dark",
     "image": "/images/discogs-tempo-adjust-logo.png"
   },
   {
@@ -36,6 +47,7 @@
   },
   {
     "name": "Donate to support my projects",
+    "imgClasses": "invert-on-dark",
     "url": "https://buymeacoffee.com/miseryconfusion",
     "image": "/images/donate-icon.png"
   },
