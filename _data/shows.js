@@ -8,6 +8,15 @@ export default function () {
       description: "'nohup' is my primary DJ and production alias since 2018.",
       shows: [
         {
+          title: "steeped: warehouse 01 with TML, Xminus1",
+          date: "2026-02-28",
+          venue: "Private location",
+          location: "Minneapolis, MN",
+          category: "DJ",
+          artistName: "'nohup'",
+          link: "https://www.instagram.com/p/DTT5zjDjpWx/",
+        },
+        {
           title: "Purelink (live) with 'nohup' (live), Hünter",
           date: "2026-02-10",
           venue: "Substation",
