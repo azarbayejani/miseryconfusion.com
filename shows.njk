@@ -5,37 +5,78 @@ layout: main
 {% import 'components.njk' as components %}
 
 <style>
-  .showList {
+  .shows {
+    --show-border: #d0d7de;
+    --show-muted: #666;
+    --show-accent: var(--link-color);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .shows {
+      --show-border: #30363d;
+      --show-muted: #8b949e;
+      --show-accent: var(--link-color-dark);
+    }
+  }
+
+  .showList,
+  .show-archive {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
 
-  .show {
-    margin-bottom: 2em;
-    border: 1px solid #ccc;
-    padding: 12px;
+  .show-card {
+    margin-bottom: 1em;
+    border: 1px solid var(--show-border);
+    border-left: 4px solid var(--show-accent);
+    padding: 14px 16px;
     border-radius: 12px;
   }
 
-  .show_row {
+  .show-card_title {
+    font-weight: 600;
+    font-size: 1.1em;
+  }
+
+  .show-card_meta,
+  .show-archive_meta {
+    color: var(--show-muted);
+    font-size: 0.875em;
+  }
+
+  .show-card_tags {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 0.5em;
-    margin-top: 0.25em;
+    margin-top: 0.6em;
   }
 
   .show_tag {
-    padding: 0.5em;
     font-size: 0.75em;
-    background: var(--link-color);
-    color: var(--background-dark);
-    border-radius: 0.5em;
+    padding: 0.1em 0.7em;
+    border: 1px solid var(--show-border);
+    border-radius: 999px;
+    color: var(--show-muted);
   }
 
-  .show_tag:last-child {
-    border-right: none;
+  .show-year {
+    margin: 1.25em 0 0.25em;
+  }
+
+  .show-archive_row {
+    display: grid;
+    grid-template-columns: 4em 1fr;
+    column-gap: 0.75em;
+    padding: 0.4em 0;
+  }
+
+  .show-archive_date {
+    color: var(--show-muted);
+    font-size: 0.875em;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    padding-top: 0.2em;
   }
 </style>
 
@@ -47,26 +88,28 @@ layout: main
   {% else %}
     <ol class="showList">
       {% for show in shows.upcoming %}
-        <li class="show">
-          <div class="show_row">
-            <div class="show_tag">{{ show.category }}</div>
-            <div class="show_tag">{{ show.artistName }}</div>
-          </div>
-
-          <div class="show_row">
-            <div>
+        <li class="show-card">
+          {% if show.title == "TBA" %}
+            <div class="show-card_title">{{ show.location }} — venue TBA</div>
+            <div class="show-card_meta">{{ show.humanDate }}</div>
+          {% else %}
+            <div class="show-card_title">
               {% if show.link %}
                 <a href="{{ show.link }}">{{ show.title }}</a>
               {% else %}
                 {{ show.title }}
               {% endif %}
             </div>
-          </div>
-          <div class="show_row">{{ show.humanDate }}</div>
-          {% if show.venue %}
-            <div class="show_row">{{ show.venue }}</div>
+            <div class="show-card_meta">
+              {{ show.humanDate }}{% if show.venue and show.venue != "TBA" %}
+                · {{ show.venue }}{% endif %}
+              · {{ show.location }}
+            </div>
           {% endif %}
-          <div class="show_row">{{ show.location }}</div>
+          <div class="show-card_tags">
+            <span class="show_tag">{{ show.category }}</span>
+            <span class="show_tag">{{ show.artistName }}</span>
+          </div>
         </li>
       {% endfor %}
     </ol>
@@ -74,35 +117,29 @@ layout: main
 
   <h2>Past dates:</h2>
 
-  <ol class="showList">
-    {% for show in shows.past.reverse() %}
-      <li class="show">
-        <div class="show_row">
-          <div class="show_tag">{{ show.category }}</div>
-          <div class="show_tag">{{ show.artistName }}</div>
-        </div>
-
-        <div class="show_row">
-          <div class="show_title">
-            {% if show.link %}
-              <a href="{{ show.link }}">{{ show.title }}</a>
-            {% else %}
-              {{ show.title }}
-            {% endif %}
+  {% for group in shows.pastByYear %}
+    <h3 class="show-year">{{ group.year }}</h3>
+    <ol class="show-archive">
+      {% for show in group.shows %}
+        <li class="show-archive_row">
+          <span class="show-archive_date">{{ show.shortDate }}</span>
+          <div>
+            <div class="show-archive_title">
+              {% if show.link %}
+                <a href="{{ show.link }}">{{ show.title }}</a>
+              {% else %}
+                {{ show.title }}
+              {% endif %}
+            </div>
+            <div class="show-archive_meta">
+              {% if show.venue %}{{ show.venue }} · {% endif %}{{ show.location }}
+              · {{ show.category }} · {{ show.artistName }}
+            </div>
           </div>
-        </div>
-        <div class="show_row">
-          <div>{{ show.humanDate }}</div>
-        </div>
-        {% if show.venue %}
-          <div class="show_row">{{ show.venue }}</div>
-        {% endif %}
-        <div class="show_row">
-          <div>{{ show.location }}</div>
-        </div>
-      </li>
-    {% endfor %}
-  </ol>
+        </li>
+      {% endfor %}
+    </ol>
+  {% endfor %}
 
   <p>
     I did my best to remember every show I've ever played. If you remember one

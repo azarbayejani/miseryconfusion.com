@@ -106,7 +106,6 @@ export default function () {
           date: "2025-09-19",
           venue: "Timbre Room",
           location: "Seattle, WA",
-          venue: "Timbre Room",
           category: "DJ",
           artistName: "'nohup'",
           link: "https://www.kremwerk.com/upcoming/2025/09/19/rollercoaster-of-dubs",
@@ -917,53 +916,39 @@ export default function () {
     },
   ];
 
-  shows.forEach((artist) => {
-    artist.shows = artist.shows.map((show) => {
+  const allShows = shows.flatMap((artist) =>
+    artist.shows.map((show) => {
+      const date = DateTime.fromISO(show.date);
       return {
         ...show,
-        humanDate: DateTime.fromISO(show.date).toLocaleString(
-          DateTime.DATE_HUGE,
-        ),
+        humanDate: date.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY),
+        shortDate: date.toFormat("MMM d"),
+        year: date.year,
       };
-    });
-  });
+    }),
+  );
+
+  const upcoming = allShows
+    .filter((show) => DateTime.fromISO(show.date) > DateTime.now())
+    .sort((a, b) => (a.date < b.date ? -1 : 1));
+
+  const past = allShows
+    .filter((show) => DateTime.fromISO(show.date) < DateTime.now())
+    .sort((a, b) => (a.date > b.date ? -1 : 1));
+
+  const pastByYear = [];
+  for (const show of past) {
+    let group = pastByYear[pastByYear.length - 1];
+    if (!group || group.year !== show.year) {
+      group = { year: show.year, shows: [] };
+      pastByYear.push(group);
+    }
+    group.shows.push(show);
+  }
 
   return {
-    upcoming: shows
-      .reduce((acc, artist) => {
-        return [...acc, ...artist.shows];
-      }, [])
-      .filter((show) => {
-        const showDate = DateTime.fromISO(show.date);
-        return showDate > DateTime.now();
-      })
-      .sort((a, b) => {
-        const aDate = DateTime.fromISO(a.date);
-        const bDate = DateTime.fromISO(b.date);
-        return aDate < bDate ? -1 : 1;
-      }),
-    past: shows
-      .reduce((acc, artist) => {
-        return [...acc, ...artist.shows];
-      }, [])
-      .filter((show) => {
-        const showDate = DateTime.fromISO(show.date);
-        return showDate < DateTime.now();
-      })
-      .sort((a, b) => {
-        const aDate = DateTime.fromISO(a.date);
-        const bDate = DateTime.fromISO(b.date);
-        return aDate < bDate ? -1 : 1;
-      }),
-    allShows: shows
-      .reduce((acc, artist) => {
-        return [...acc, ...artist.shows];
-      }, [])
-      .sort((a, b) => {
-        const aDate = DateTime.fromISO(a.date);
-        const bDate = DateTime.fromISO(b.date);
-        return aDate < bDate ? -1 : 1;
-      }),
+    upcoming,
+    pastByYear,
     byArtist: shows,
   };
 }
