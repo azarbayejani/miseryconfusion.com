@@ -746,6 +746,7 @@ export default function () {
           location: "Seattle, WA",
           category: "liveset",
           artistName: "'sighup'",
+          link: "https://listenitsasoundshow.weebly.com",
         },
         {
           title: "Orphan Radio live showcase",
