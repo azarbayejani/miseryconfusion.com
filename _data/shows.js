@@ -24,6 +24,14 @@ export default function () {
           artistName: "'nohup'",
         },
         {
+          title: "Rabba's House feat. 'nohup', Nick Carroll, Alesandro Carrabba",
+          date: "2026-09-04",
+          venue: "Timbre Room",
+          location: "Seattle, WA",
+          category: "DJ",
+          artistName: "'nohup'",
+        },
+        {
           title: "Campette (Frogette)",
           date: "2026-07-04",
           venue: "Tan Oak Park",
