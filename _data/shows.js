@@ -30,6 +30,7 @@ export default function () {
           location: "Seattle, WA",
           category: "DJ",
           artistName: "'nohup'",
+          link: "https://off99seattle.com/products/july-2nd-rabbas-house-feat-nohup",
         },
         {
           title: "Campette (Frogette)",
