@@ -42,6 +42,8 @@ export default function () {
         },
         {
           title: "Honcho H0L0 Takeover",
+          lineup:
+            "999ADJ, Carlos Souffront, Carrie Sours, Carrieondisco, Honcho, 'nohup', Simisea, Sterling Juan Diaz, wngdu",
           date: "2026-10-24",
           venue: "H0L0",
           location: "New York, NY",
