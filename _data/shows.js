@@ -50,8 +50,8 @@ export default function () {
           link: "https://ra.co/events/2537038",
         },
         {
-          title:
-            "Rollercoaster of Dubs feat. August V.M. & Jennifer Spektor b2b 'nohup'",
+          title: "Rollercoaster of Dubs",
+          lineup: "August V.M. & Jennifer Spektor b2b 'nohup'",
           date: "2026-10-17",
           venue: "Timbre Room",
           location: "Seattle, WA",
@@ -59,8 +59,8 @@ export default function () {
           artistName: "'nohup'",
         },
         {
-          title:
-            "Rabba's House feat. 'nohup', Nick Carroll, Alesandro Carrabba",
+          title: "Rabba's House",
+          lineup: "'nohup', Nick Carroll, Alesandro Carrabba",
           date: "2026-09-04",
           venue: "Timbre Room",
           location: "Seattle, WA",
@@ -101,7 +101,8 @@ export default function () {
           artistName: "'nohup'",
         },
         {
-          title: "steeped: warehouse 01 with TML, Xminus1",
+          title: "steeped: warehouse 01",
+          lineup: "'nohup', TML, Xminus1",
           date: "2026-02-28",
           venue: "Private location",
           location: "Minneapolis, MN",
@@ -110,7 +111,8 @@ export default function () {
           link: "https://www.instagram.com/p/DTT5zjDjpWx/",
         },
         {
-          title: "Purelink (live) with 'nohup' (live), Hünter",
+          title: "Routine: Purelink",
+          lineup: "Purelink (live), 'nohup' (live), Hünter",
           date: "2026-02-10",
           venue: "Substation",
           location: "Seattle, WA",
@@ -147,7 +149,8 @@ export default function () {
         },
         {
           title:
-            "Rollercoaster of Dubs presents \"Enron's Ride of Broken Dreams\" with Market Failure, Jennifer Spektor, and 'nohup'",
+            'Rollercoaster of Dubs presents "Enron\'s Ride of Broken Dreams"',
+          lineup: "Market Failure, Jennifer Spektor, and 'nohup'",
           date: "2025-09-19",
           venue: "Timbre Room",
           location: "Seattle, WA",
@@ -183,8 +186,8 @@ export default function () {
           link: "https://ra.co/events/2160644",
         },
         {
-          title:
-            "Lotion presents: II Toner with x3Butterfly, Succubass, and Backandbodyhertz",
+          title: "Lotion presents: Toner II",
+          lineup: "x3Butterfly, Succubass, and Backandbodyhertz",
           date: "2025-04-26",
           venue: "Private location",
           location: "Seattle, WA",
@@ -210,8 +213,8 @@ export default function () {
           artistName: "'nohup'",
         },
         {
-          title:
-            "Rollercoaster of Dubs 2 w/ 'nohup', Jennifer Spektor, and Eve Defy",
+          title: "Rollercoaster of Dubs 2",
+          lineup: "'nohup', Jennifer Spektor, and Eve Defy",
           date: "2025-01-24",
           venue: "Timbre Room",
           location: "Seattle, WA",
@@ -220,7 +223,8 @@ export default function () {
           link: "https://ra.co/events/2082710",
         },
         {
-          title: "WERM X PULSE: D.Dan, Yamanaka, Plus, 'nohup', August V.M.",
+          title: "WERM X PULSE",
+          lineup: "D.Dan, Yamanaka, Plus, 'nohup', August V.M.",
           date: "2025-01-10",
           venue: "Private Location",
           location: "Portland, OR",
@@ -246,7 +250,8 @@ export default function () {
           link: "https://ra.co/events/2058103",
         },
         {
-          title: "Sorry Records with 'nohup' & boxofbox b2b Nick Boyd",
+          title: "Sorry Records",
+          lineup: "'nohup', boxofbox b2b Nick Boyd",
           date: "2024-11-03",
           venue: "Bossa Nova Civic Club",
           location: "New York, NY",
@@ -272,7 +277,8 @@ export default function () {
           artistName: "'nohup'",
         },
         {
-          title: "Atmosphérique with sold, 'nohup' and Earthbeam",
+          title: "Atmosphérique",
+          lineup: "sold, 'nohup' and Earthbeam",
           date: "2024-10-04",
           venue: "Timbre Room",
           location: "Seattle, WA",
@@ -298,7 +304,8 @@ export default function () {
           artistName: "'nohup'",
         },
         {
-          title: "Deep Listening w/ Jake Muir, 'nohup', and Le Creuset",
+          title: "Deep Listening",
+          lineup: "Jake Muir, 'nohup', and Le Creuset",
           date: "2024-07-06",
           venue: "Private Location",
           location: "Seattle, WA",
@@ -330,7 +337,8 @@ export default function () {
           artistName: "'nohup'",
         },
         {
-          title: "Particle FM Takeover ('nohup' b2b Jennifer Spektor)",
+          title: "Particle FM Takeover",
+          lineup: "'nohup' b2b Jennifer Spektor",
           date: "2024-05-31",
           venue: "Timbre Room",
           location: "Seattle, WA",
@@ -347,7 +355,8 @@ export default function () {
           artistName: "'nohup'",
         },
         {
-          title: "Rollercoaster of Dubs ('nohup' b2b Jennifer Spektor)",
+          title: "Rollercoaster of Dubs",
+          lineup: "'nohup' b2b Jennifer Spektor",
           date: "2024-03-30",
           location: "Timbre Room - Seattle, WA",
           category: "DJ",
@@ -373,7 +382,8 @@ export default function () {
           link: "https://ra.co/events/1733506",
         },
         {
-          title: "impromptu w/ Sepehr & wngdu",
+          title: "impromptu w/ Sepehr",
+          lineup: "Sepehr, wngdu, 'nohup', Backandbodyhertz",
           date: "2023-08-25",
           venue: "Private Location",
           location: "Seattle, WA",
@@ -398,7 +408,8 @@ export default function () {
           artistName: "'nohup'",
         },
         {
-          title: "Club Sandwich featuring 'nohup' + Someone Person",
+          title: "Club Sandwich",
+          lineup: "'nohup' + Someone Person",
           date: "2023-07-02",
           venue: "Julia's in Wallingford",
           location: "Seattle, WA",
@@ -406,7 +417,8 @@ export default function () {
           artistName: "'nohup'",
         },
         {
-          title: "Chasers feat. Jennifer Spektor + 'nohup'",
+          title: "Chasers",
+          lineup: "Jennifer Spektor + 'nohup'",
           date: "2023-05-20",
           venue: "Timbre Room",
           location: "Seattle, WA",
@@ -432,7 +444,8 @@ export default function () {
           link: "https://groundhum.net/pages/ground-hum-2023",
         },
         {
-          title: "Exploration w/ Josh Dahlberg, 'nohup', Drew Pompa",
+          title: "Exploration",
+          lineup: "Josh Dahlberg, 'nohup', Drew Pompa",
           date: "2023-02-02",
           venue: "Selector Records and Tapes",
           location: "Seattle, WA",
@@ -450,7 +463,8 @@ export default function () {
           link: "https://ra.co/events/1600679",
         },
         {
-          title: "Off99 Presents: Marcellus Pittman, w/ 'nohup'",
+          title: "Off99 Presents",
+          lineup: "Marcellus Pittman w/ 'nohup'",
           date: "2022-09-09",
           venue: "Cherry",
           location: "Seattle, WA",
@@ -459,7 +473,8 @@ export default function () {
           link: "https://www.kremwerk.com/upcoming/2022/9/9/off99-presents-marcellus-pittman",
         },
         {
-          title: "Vertex feat. Avalon Emerson, 'nohup', and DJ Later",
+          title: "Vertex: Avalon Emerson",
+          lineup: "Avalon Emerson, 'nohup', and DJ Later",
           date: "2021-07-30",
           venue: "Timbre Room",
           location: "Seattle, WA",
@@ -493,8 +508,8 @@ export default function () {
           link: "https://ra.co/events/1549371",
         },
         {
-          title:
-            "Research presents Shaytoon Records feat. Sepehr, Mozhgan & 'nohup'",
+          title: "Research presents Shaytoon Records",
+          lineup: "Sepehr, Mozhgan & 'nohup'",
           date: "2022-04-08",
           venue: "Kremwerk",
           location: "Seattle, WA",
@@ -504,6 +519,7 @@ export default function () {
         },
         {
           title: "Routine feat. Leonce",
+          lineup: "Leonce, 'nohup', AREL, Reverend Dollars",
           date: "2022-03-26",
           venue: "Kremwerk",
           location: "Seattle, WA",
@@ -520,7 +536,8 @@ export default function () {
           artistName: "'nohup'",
         },
         {
-          title: "Club Sandwich featuring 'nohup' & Jess Duran b2b Chris Moore",
+          title: "Club Sandwich",
+          lineup: "'nohup' & Jess Duran b2b Chris Moore",
           date: "2021-12-18",
           venue: "Union Coffee",
           location: "Seattle, WA",
@@ -536,7 +553,8 @@ export default function () {
           artistName: "'nohup'",
         },
         {
-          title: "Routine feat. 'nohup', Sherman, T.Wan, Wetman",
+          title: "Routine",
+          lineup: "'nohup', Sherman, T.Wan, Wetman",
           date: "2021-08-21",
           venue: "Kremwerk",
           location: "Seattle, WA",
@@ -554,6 +572,7 @@ export default function () {
         },
         {
           title: "Psycho Bummer feat. Derek Plaslaiko",
+          lineup: "Derek Plaslaiko, 'nohup', DJ Scam",
           date: "2021-07-10",
           venue: "Kremwerk",
           location: "Seattle, WA",
@@ -570,8 +589,8 @@ export default function () {
           artistName: "'nohup'",
         },
         {
-          title:
-            "A stream for Odessa: 'nohup' b2b T.Wan b2b DJ Having Sex b2b livwutang",
+          title: "A stream for Odessa",
+          lineup: "'nohup' b2b T.Wan b2b DJ Having Sex b2b livwutang",
           date: "2021-04-25",
           venue: "Kremwerk Twitch Channel",
           location: "Online Event",
@@ -579,8 +598,8 @@ export default function () {
           artistName: "'nohup'",
         },
         {
-          title:
-            "illegal afters 02. livestream release party w/ Xminus1, Eve Defy, 'nohup'",
+          title: "illegal afters 02. livestream release party",
+          lineup: "Xminus1, Eve Defy, 'nohup'",
           date: "2021-03-05",
           venue: "Kremwerk Twitch Channel",
           location: "Online Event",
@@ -589,7 +608,8 @@ export default function () {
           link: "https://www.kremwerk.com/upcoming/2021/3/5/illegal-afters-02-release-party",
         },
         {
-          title: "Kremwerk Livestream Series: Sangwoo, 'nohup'",
+          title: "Kremwerk Livestream Series",
+          lineup: "Sangwoo, 'nohup'",
           date: "2020-09-18",
           venue: "Kremwerk Twitch Channel",
           location: "Online Event",
@@ -606,7 +626,8 @@ export default function () {
           artistName: "'nohup'",
         },
         {
-          title: "Research: Galcher Lustwerk, Mike Grant & 'nohup'",
+          title: "Research",
+          lineup: "Galcher Lustwerk, Mike Grant & 'nohup'",
           date: "2019-11-23",
           location: "Seattle, WA",
           venue: "Kremwerk",
@@ -615,7 +636,8 @@ export default function () {
           link: "https://ra.co/events/1336430",
         },
         {
-          title: "Tech Startup w/ 'nohup', my flower & livwutang",
+          title: "Tech Startup",
+          lineup: "'nohup', my flower & livwutang",
           date: "2019-11-16",
           location: "Seattle, WA",
           venue: "Timbre Room",
@@ -624,7 +646,8 @@ export default function () {
           link: "https://ra.co/events/1345237",
         },
         {
-          title: "Tetris Effect: 'nohup' & P.Ross!",
+          title: "Tetris Effect",
+          lineup: "'nohup' & P.Ross!",
           date: "2019-09-21",
           location: "Vancouver, BC",
           venue: "Conduit Gallery",
@@ -632,8 +655,9 @@ export default function () {
           artistName: "'nohup'",
         },
         {
-          title:
-            "Kremfest 2019 (Shook Showcase) w/ Fracture, Ishan Sound, 2POC ('nohup' b2b tondiue), Agate, Wheeler",
+          title: "Kremfest 2019 (Shook Showcase)",
+          lineup:
+            "Fracture, Ishan Sound, 2POC ('nohup' b2b tondiue), Agate, Wheeler",
           date: "2019-09-19",
           venue: "Timbre Room",
           location: "Seattle, WA",
@@ -650,8 +674,8 @@ export default function () {
           artistName: "'nohup'",
         },
         {
-          title:
-            "Research [Spring Formal] ft. DJ Bus Replacement Service, 'nohup' & Randy Jones",
+          title: "Research [Spring Formal]",
+          lineup: "DJ Bus Replacement Service, 'nohup' & Randy Jones",
           date: "2019-04-26",
           venue: "Timbre Room",
           location: "Seattle, WA",
@@ -660,7 +684,8 @@ export default function () {
           link: "https://ra.co/events/1243614",
         },
         {
-          title: "Action Potential: Kedr Livansky w/ slowfoam, 'nohup'",
+          title: "Action Potential",
+          lineup: "Kedr Livansky w/ slowfoam, 'nohup'",
           date: "2019-02-23",
           venue: "Timbre Room",
           location: "Seattle, WA",
@@ -669,7 +694,8 @@ export default function () {
           link: "https://ra.co/events/1277136",
         },
         {
-          title: "Apt E pres. Eve Defy, 'nohup', and Flora FM",
+          title: "Apt E",
+          lineup: "Eve Defy, 'nohup', and Flora FM",
           date: "2019-02-23",
           venue: "Location TBH",
           location: "Seattle, WA",
@@ -709,8 +735,8 @@ export default function () {
           artistName: "'sighup'",
         },
         {
-          title:
-            "Third Rail featuring Tapdup w/ Gab7, 'sighup', Drankay, and Permanent",
+          title: "Third Rail featuring Tapdup",
+          lineup: "Gab7, 'sighup', Drankay, and Permanent",
           date: "2012-12-02",
           venue: "WMUC Radio",
           location: "College Park, MD",
@@ -742,8 +768,8 @@ export default function () {
           artistName: "'sighup'",
         },
         {
-          title:
-            "Kremwerk presents: Jabon, 'sighup', Portable Morla, Somesurprises",
+          title: "Kremwerk presents Jabon",
+          lineup: "Jabon, 'sighup', Portable Morla, Somesurprises",
           date: "2014-09-04",
           venue: "Kremwerk",
           location: "Seattle, WA",
@@ -759,8 +785,8 @@ export default function () {
           artistName: "'sighup'",
         },
         {
-          title:
-            "Action Potential and Elevator present Inga Copeland, VRS & 'sighup'",
+          title: "Action Potential and Elevator present",
+          lineup: "Inga Copeland, VRS & 'sighup'",
           date: "2016-09-15",
           venue: "Kremwerk",
           location: "Seattle, WA",
@@ -768,7 +794,8 @@ export default function () {
           artistName: "'sighup'",
         },
         {
-          title: "Simone + 'sighup' live on Freeaxis",
+          title: "Freeaxis Broadcast",
+          lineup: "Simone + 'sighup'",
           date: "2016-11-02",
           venue: "Freeaxis",
           location: "Seattle, WA",
@@ -776,8 +803,8 @@ export default function () {
           artistName: "'sighup'",
         },
         {
-          title:
-            "No Request Line Launch Party w/ Addison Groove, Canaan, 'sighup', Slantooth",
+          title: "No Request Line Launch Party",
+          lineup: "Addison Groove, Canaan, 'sighup', Slantooth",
           date: "2017-05-06",
           venue: "Timbre Room",
           location: "Seattle, WA",
@@ -810,8 +837,8 @@ export default function () {
           artistName: "'sighup'",
         },
         {
-          title:
-            "Alternating Currents w/ Conduit, 'sighup', T.Wan, Miles Mercer, R-Pal",
+          title: "Alternating Currents",
+          lineup: "Conduit, 'sighup', T.Wan, Miles Mercer, R-Pal",
           date: "2017-10-13",
           venue: "lovecitylove",
           location: "Seattle, WA",
@@ -819,8 +846,8 @@ export default function () {
           artistName: "'sighup'",
         },
         {
-          title:
-            "Decibel and Action Potential present Laurel Halo + Eli Keszler, Felisha Ledesma, 'sighup', Raica",
+          title: "Decibel and Action Potential Present",
+          lineup: "Laurel Halo + Eli Keszler, Felisha Ledesma, 'sighup', Raica",
           date: "2017-10-14",
           venue: "Timbre Room",
           location: "Seattle, WA",
@@ -844,8 +871,8 @@ export default function () {
           artistName: "'sighup'",
         },
         {
-          title:
-            "Kremfest 2018 (Orphan showcase) w/ Local Artist, 'sighup', livwutang, and Klein Zage",
+          title: "Kremfest 2018 (Orphan showcase)",
+          lineup: "Local Artist, 'sighup', livwutang, and Klein Zage",
           date: "2018-09-22",
           venue: "Timbre Room Patio",
           location: "Seattle, WA",
@@ -859,8 +886,8 @@ export default function () {
       id: "dj-kaaba-emoji",
       shows: [
         {
-          title:
-            "Yalla Yeehaw w/ DJ Cardamami, DJ Mansaf Mama & DJ Kaaba Emoji",
+          title: "Yalla Yeehaw",
+          lineup: "DJ Cardamami, DJ Mansaf Mama & DJ Kaaba Emoji",
           date: "2019-07-28",
           venue: "Crocodile Backbar",
           location: "Seattle, WA",
@@ -868,8 +895,8 @@ export default function () {
           artistName: "DJ Kaaba Emoji",
         },
         {
-          title:
-            "Yalla Yeehaw w/ DJ Cardamami, DJ Mansaf Mama & DJ Kaaba Emoji",
+          title: "Yalla Yeehaw",
+          lineup: "DJ Cardamami, DJ Mansaf Mama & DJ Kaaba Emoji",
           date: "2019-09-05",
           venue: "mbar",
           location: "Seattle, WA",
@@ -925,7 +952,8 @@ export default function () {
           artistName: "Slow Drips",
         },
         {
-          title: "Nightspace w/ youryoungbody, Aeon Fux & Slow Drips",
+          title: "Nightspace CD Release Show",
+          lineup: "Nighspace, youryoungbody, Aeon Fux & Slow Drips",
           date: "2015-11-20",
           venue: "Cairo",
           location: "Seattle, WA",
@@ -933,8 +961,8 @@ export default function () {
           artistName: "Slow Drips",
         },
         {
-          title:
-            "Pent Up Release + Gallery 1412 present CJ Boyd, Cathartech, Sokai Stilhed, Slow Drips",
+          title: "Pent Up Release + Gallery 1412 Present",
+          lineup: "CJ Boyd, Cathartech, Sokai Stilhed, Slow Drips",
           date: "2016-04-09",
           venue: "Gallery 1412",
           location: "Seattle, WA",
@@ -942,8 +970,8 @@ export default function () {
           artistName: "Slow Drips",
         },
         {
-          title:
-            "Elevator Presents Moor Mother, Jenny Zhang, Slow Drips, Prius",
+          title: "Elevator Presents",
+          lineup: "Moor Mother, Jenny Zhang, Slow Drips, Prius",
           date: "2016-09-11",
           venue: "Machine House Brewery",
           location: "Seattle, WA",
