@@ -969,6 +969,8 @@ export default function () {
         ...show,
         humanDate: date.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY),
         shortDate: date.toFormat("MMM d"),
+        weekday: date.toFormat("ccc"),
+        monthDay: date.toFormat("MMM d"),
         year: date.year,
       };
     }),
@@ -992,8 +994,11 @@ export default function () {
     group.shows.push(show);
   }
 
+  const upcomingSpansYears = new Set(upcoming.map((show) => show.year)).size > 1;
+
   return {
     upcoming,
+    upcomingSpansYears,
     pastByYear,
     byArtist: shows,
   };

@@ -17,6 +17,10 @@ layout: main
       --show-muted: #8b949e;
       --show-accent: var(--link-color-dark);
     }
+
+    .show-card_date {
+      color: var(--background-dark);
+    }
   }
 
   .showList,
@@ -27,16 +31,84 @@ layout: main
   }
 
   .show-card {
+    display: flex;
     margin-bottom: 1em;
     border: 1px solid var(--show-border);
-    border-left: 4px solid var(--show-accent);
-    padding: 14px 16px;
     border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .show-card_date {
+    flex: 0 0 4.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 14px 8px;
+    background: var(--show-accent);
+    color: #fff;
+    text-align: center;
+    line-height: 1.15;
+    text-transform: uppercase;
+  }
+
+  .show-card_weekday {
+    font-size: 0.7em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    /* Match the title's line box so the two sit on the same line */
+    line-height: calc(1.1rem * 1.25);
+  }
+
+  .show-card_day {
+    font-size: 1em;
+    font-weight: 700;
+    margin-top: 0.1em;
+  }
+
+  .show-card_year {
+    font-size: 0.7em;
+    opacity: 0.85;
+  }
+
+  .show-card_body {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 14px 16px;
+  }
+
+  /* On narrow screens, put the date in a strip across the top of the card */
+  @media (max-width: 540px) {
+    .show-card {
+      flex-direction: column;
+    }
+
+    .show-card_date {
+      flex: 0 0 auto;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: baseline;
+      gap: 0.5em;
+      padding: 6px 16px;
+    }
+
+    .show-card_weekday {
+      line-height: inherit;
+    }
+
+    .show-card_day {
+      margin-top: 0;
+    }
+
+    .show-card_body {
+      padding-top: 12px;
+    }
   }
 
   .show-card_title {
     font-weight: 600;
     font-size: 1.1em;
+    line-height: 1.25;
   }
 
   .show-card_meta,
@@ -89,26 +161,32 @@ layout: main
     <ol class="showList">
       {% for show in shows.upcoming %}
         <li class="show-card">
-          {% if show.title == "TBA" %}
-            <div class="show-card_title">{{ show.location }} — venue TBA</div>
-            <div class="show-card_meta">{{ show.humanDate }}</div>
-          {% else %}
-            <div class="show-card_title">
-              {% if show.link %}
-                <a href="{{ show.link }}">{{ show.title }}</a>
-              {% else %}
-                {{ show.title }}
-              {% endif %}
+          <div class="show-card_date">
+            <span class="show-card_weekday">{{ show.weekday }}</span>
+            <span class="show-card_day">{{ show.monthDay }}</span>
+            {% if shows.upcomingSpansYears %}
+              <span class="show-card_year">{{ show.year }}</span>
+            {% endif %}
+          </div>
+          <div class="show-card_body">
+            {% if show.title == "TBA" %}
+              <div class="show-card_title">{{ show.location }} — venue TBA</div>
+            {% else %}
+              <div class="show-card_title">
+                {% if show.link %}
+                  <a href="{{ show.link }}">{{ show.title }}</a>
+                {% else %}
+                  {{ show.title }}
+                {% endif %}
+              </div>
+              <div class="show-card_meta">
+                {% if show.venue and show.venue != "TBA" %}{{ show.venue }} · {% endif %}{{ show.location }}
+              </div>
+            {% endif %}
+            <div class="show-card_tags">
+              <span class="show_tag">{{ show.category }}</span>
+              <span class="show_tag">{{ show.artistName }}</span>
             </div>
-            <div class="show-card_meta">
-              {{ show.humanDate }}{% if show.venue and show.venue != "TBA" %}
-                · {{ show.venue }}{% endif %}
-              · {{ show.location }}
-            </div>
-          {% endif %}
-          <div class="show-card_tags">
-            <span class="show_tag">{{ show.category }}</span>
-            <span class="show_tag">{{ show.artistName }}</span>
           </div>
         </li>
       {% endfor %}
