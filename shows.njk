@@ -115,21 +115,7 @@ layout: main
   .show-archive_meta {
     color: var(--show-muted);
     font-size: 0.875em;
-  }
-
-  .show-card_tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em;
-    margin-top: 0.6em;
-  }
-
-  .show_tag {
-    font-size: 0.75em;
-    padding: 0.1em 0.7em;
-    border: 1px solid var(--show-border);
-    border-radius: 999px;
-    color: var(--show-muted);
+    line-height: 1.25;
   }
 
   .show-year {
@@ -171,6 +157,9 @@ layout: main
           <div class="show-card_body">
             {% if show.title == "TBA" %}
               <div class="show-card_title">{{ show.location }} — venue TBA</div>
+              <div class="show-card_meta">
+                {{ show.category }} · {{ show.artistName }}
+              </div>
             {% else %}
               <div class="show-card_title">
                 {% if show.link %}
@@ -180,13 +169,12 @@ layout: main
                 {% endif %}
               </div>
               <div class="show-card_meta">
-                {% if show.venue and show.venue != "TBA" %}{{ show.venue }} · {% endif %}{{ show.location }}
+                {{ show.category }} · {{ show.artistName }}
+              </div>
+              <div class="show-card_meta">
+                {% if show.venue and show.venue != "TBA" %}{{ show.venue }} ·{% endif %} {{ show.location }}
               </div>
             {% endif %}
-            <div class="show-card_tags">
-              <span class="show_tag">{{ show.category }}</span>
-              <span class="show_tag">{{ show.artistName }}</span>
-            </div>
           </div>
         </li>
       {% endfor %}
@@ -209,9 +197,12 @@ layout: main
                 {{ show.title }}
               {% endif %}
             </div>
+
             <div class="show-archive_meta">
-              {% if show.venue %}{{ show.venue }} · {% endif %}{{ show.location }}
-              · {{ show.category }} · {{ show.artistName }}
+              {{ show.category }} · {{ show.artistName }}
+            </div>
+            <div class="show-archive_meta">
+              {% if show.venue %}{{ show.venue }} ·{% endif %} {{ show.location }}
             </div>
           </div>
         </li>
