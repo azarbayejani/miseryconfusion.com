@@ -969,7 +969,7 @@ export default function () {
         ...show,
         humanDate: date.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY),
         shortDate: date.toFormat("MMM d"),
-        weekday: date.toFormat("ccc"),
+        weekday: date.toFormat("cccc"),
         monthDay: date.toFormat("MMM d"),
         year: date.year,
       };
@@ -984,22 +984,23 @@ export default function () {
     .filter((show) => DateTime.fromISO(show.date) < DateTime.now())
     .sort((a, b) => (a.date > b.date ? -1 : 1));
 
-  const pastByYear = [];
-  for (const show of past) {
-    let group = pastByYear[pastByYear.length - 1];
-    if (!group || group.year !== show.year) {
-      group = { year: show.year, shows: [] };
-      pastByYear.push(group);
+  const groupByYear = (list) => {
+    const groups = [];
+    for (const show of list) {
+      let group = groups[groups.length - 1];
+      if (!group || group.year !== show.year) {
+        group = { year: show.year, shows: [] };
+        groups.push(group);
+      }
+      group.shows.push(show);
     }
-    group.shows.push(show);
-  }
-
-  const upcomingSpansYears = new Set(upcoming.map((show) => show.year)).size > 1;
+    return groups;
+  };
 
   return {
     upcoming,
-    upcomingSpansYears,
-    pastByYear,
+    upcomingByYear: groupByYear(upcoming),
+    pastByYear: groupByYear(past),
     byArtist: shows,
   };
 }

@@ -43,32 +43,22 @@ layout: main
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 14px 8px;
+    justify-content: center;
+    padding: 0.4em 0;
     background: var(--show-accent);
     color: #fff;
     text-align: center;
     line-height: 1.15;
-    text-transform: uppercase;
   }
 
   .show-card_weekday {
-    font-size: 0.7em;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    /* Match the title's line box so the two sit on the same line */
-    line-height: calc(1.1rem * 1.25);
+    font-size: 0.6em;
+    font-weight: 400;
   }
 
   .show-card_day {
     font-size: 1em;
     font-weight: 700;
-    margin-top: 0.1em;
-  }
-
-  .show-card_year {
-    font-size: 0.7em;
-    opacity: 0.85;
   }
 
   .show-card_body {
@@ -144,41 +134,44 @@ layout: main
   {% if shows.upcoming.length == 0 %}
     <p>There are no shows scheduled at the moment.</p>
   {% else %}
-    <ol class="showList">
-      {% for show in shows.upcoming %}
-        <li class="show-card">
-          <div class="show-card_date">
-            <span class="show-card_weekday">{{ show.weekday }}</span>
-            <span class="show-card_day">{{ show.monthDay }}</span>
-            {% if shows.upcomingSpansYears %}
-              <span class="show-card_year">{{ show.year }}</span>
-            {% endif %}
-          </div>
-          <div class="show-card_body">
-            {% if show.title == "TBA" %}
-              <div class="show-card_title">{{ show.location }} — venue TBA</div>
-              <div class="show-card_meta">
-                {{ show.category }} · {{ show.artistName }}
-              </div>
-            {% else %}
-              <div class="show-card_title">
-                {% if show.link %}
-                  <a href="{{ show.link }}">{{ show.title }}</a>
-                {% else %}
-                  {{ show.title }}
-                {% endif %}
-              </div>
-              <div class="show-card_meta">
-                {{ show.category }} · {{ show.artistName }}
-              </div>
-              <div class="show-card_meta">
-                {% if show.venue and show.venue != "TBA" %}{{ show.venue }} ·{% endif %} {{ show.location }}
-              </div>
-            {% endif %}
-          </div>
-        </li>
-      {% endfor %}
-    </ol>
+    {% for group in shows.upcomingByYear %}
+      {% if not loop.first %}
+        <h3 class="show-year">{{ group.year }}</h3>
+      {% endif %}
+        <ol class="showList">
+        {% for show in group.shows %}
+          <li class="show-card">
+            <div class="show-card_date">
+              <span class="show-card_weekday">{{ show.weekday }}</span>
+              <span class="show-card_day">{{ show.monthDay }}</span>
+            </div>
+            <div class="show-card_body">
+              {% if show.title == "TBA" %}
+                <div class="show-card_title">{{ show.location }} — venue TBA</div>
+                <div class="show-card_meta">
+                  {{ show.category }} · {{ show.artistName }}
+                </div>
+              {% else %}
+                <div class="show-card_title">
+                  {% if show.link %}
+                    <a href="{{ show.link }}">{{ show.title }}</a>
+                  {% else %}
+                    {{ show.title }}
+                  {% endif %}
+                </div>
+                <div class="show-card_meta">
+                  {{ show.category }} · {{ show.artistName }}
+                </div>
+                <div class="show-card_meta">
+                  {% if show.venue and show.venue != "TBA" %}{{ show.venue }} ·{% endif %}
+                  {{ show.location }}
+                </div>
+              {% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      </ol>
+    {% endfor %}
   {% endif %}
 
   <h2>Past dates:</h2>
@@ -202,7 +195,8 @@ layout: main
               {{ show.category }} · {{ show.artistName }}
             </div>
             <div class="show-archive_meta">
-              {% if show.venue %}{{ show.venue }} ·{% endif %} {{ show.location }}
+              {% if show.venue %}{{ show.venue }} ·{% endif %}
+              {{ show.location }}
             </div>
           </div>
         </li>
