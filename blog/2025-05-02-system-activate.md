@@ -5,7 +5,7 @@ date: 2025-05-02
 ---
 
 
-<img src="/images/system-activate-poster.png" alt="System Activate poster" style="width: 50%; height: auto;"/>
+<img src="/images/posters/system-activate-poster.png" alt="System Activate poster" style="width: 50%; height: auto;"/>
 
 I'm really excited to share that I will be playing at
 [System Activate](https://systemactivate.com), a new rite of the Motherbeat, in

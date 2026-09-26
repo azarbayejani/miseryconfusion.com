@@ -33,12 +33,15 @@ export default function () {
         // },
         {
           title: "SLIP",
+          lineup:
+            "Cali Colby, Club Morena, Cousin Chris, Cucci, Diamond Lil, Exis, Gag Reflex, Hyeonje, Jade Dynasty, Jordana, KNXTRN, Kontravida, Natalie Bliss, 'nohup', Sepha, Slynky, Stevie 303, Succubass",
           date: "2026-10-31",
           venue: "Kremwerk Complex",
           location: "Seattle, WA",
           category: "DJ",
           artistName: "'nohup'",
           link: "https://www.kremwerk.com/upcoming/2026/10/31/kremwerk-slip-halloween-2026",
+          poster: "/images/posters/2026-10-31-slip.jpg",
         },
         {
           title: "Honcho H0L0 Takeover",
@@ -50,6 +53,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/2537038",
+          poster: "/images/posters/2026-10-24-honcho-h0l0-takeover.jpg",
         },
         {
           title: "Rollercoaster of Dubs",
@@ -59,6 +63,8 @@ export default function () {
           location: "Seattle, WA",
           category: "DJ",
           artistName: "'nohup'",
+          link: "https://www.kremwerk.com/upcoming/2026/10/17/rollercoaster-of-dubs",
+          poster: "/images/posters/2026-10-17-rollercoaster-of-dubs-4.png",
         },
         {
           title: "Rabba's House",
@@ -72,11 +78,15 @@ export default function () {
         },
         {
           title: "Campette (Frogette)",
+          lineup:
+            "Club Chow, Fallen Matter, Gizmoe, KK Shucko, Lychee, 'nohup', Nolid, Poof, Rich King, Sister Zo, Way, Yessi",
           date: "2026-07-04",
           venue: "Tan Oak Park",
           location: "Laytonville, CA",
           category: "DJ",
           artistName: "'nohup'",
+          link: "https://www.instagram.com/hi.campette/p/DaLp7LxydH-",
+          poster: "/images/posters/2026-07-04-Campette.jpg",
         },
         {
           title: "Vessel",
@@ -96,6 +106,7 @@ export default function () {
         },
         {
           title: "Envelope Soundsystem: Eōstre",
+          lineup: "Agraybé, Introspekt, 'nohup', The Baptist",
           date: "2026-03-28",
           venue: "Outdoors",
           location: "Oakland, CA",
@@ -111,6 +122,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://www.instagram.com/p/DTT5zjDjpWx/",
+          poster: "/images/posters/2026-02-28-steeped-warehouse-01.jpg",
         },
         {
           title: "Routine: Purelink",
@@ -121,6 +133,7 @@ export default function () {
           category: "liveset",
           artistName: "'nohup'",
           link: "https://www.eventbrite.com/e/purelink-tickets-1974957570257",
+          poster: "/images/posters/2026-02-10-routine-purelink.jpg",
         },
         {
           title: "'nohup', THC.XLR, and Travel Agent at Add-a-Ball",
@@ -148,6 +161,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://www.kremwerk.com/upcoming/2025/11/20/trainspotting-rave",
+          poster: "/images/posters/2025-11-20-trainspotting-rave.jpg",
         },
         {
           title:
@@ -159,6 +173,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://www.kremwerk.com/upcoming/2025/09/19/rollercoaster-of-dubs",
+          poster: "/images/posters/rollercoaster-of-dubs-3.jpg",
         },
         {
           title: "System Activate",
@@ -168,6 +183,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://systemactivate.com",
+          poster: "/images/posters/system-activate-poster.png",
         },
         {
           title: "'nohup' with Bad Luck and THC.XLR",
@@ -186,6 +202,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/2160644",
+          poster: "/images/posters/2025-05-02-nohup-seelene.jpg",
         },
         {
           title: "Lotion presents: Toner II",
@@ -196,6 +213,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/2153298",
+          poster: "/images/posters/2025-04-26-lotion-presents-toner-ii.jpg",
         },
         {
           title: "Kremwerk 11 Year Anniversary",
@@ -205,6 +223,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/2089202",
+          poster: "/images/posters/2025-02-22-kremwerk-11-year-anniversary.jpg",
         },
         {
           title: "'nohup' at Otherworld",
@@ -223,6 +242,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/2082710",
+          poster: "/images/posters/2025-01-24-rollercoaster-of-dubs-2.jpg",
         },
         {
           title: "WERM X PULSE",
@@ -233,6 +253,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/2052378",
+          poster: "/images/posters/2025-01-10-werm-x-pulse.jpg",
         },
         {
           title: "'nohup' & kate.land",
@@ -250,6 +271,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/2058103",
+          poster: "/images/posters/2024-12-07-physical-therapy-nohup.jpg",
         },
         {
           title: "Sorry Records",
@@ -260,6 +282,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/2021696",
+          poster: "/images/posters/2024-11-03-sorry-records.jpg",
         },
         {
           title: "Osmosis in the Trees",
@@ -269,6 +292,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/1986191",
+          poster: "/images/posters/2024-10-24-osmosis-in-the-trees.jpg",
         },
         {
           title: "A going away party",
@@ -287,6 +311,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/2008866",
+          poster: "/images/posters/2024-10-04-atmospherique.jpg",
         },
         {
           title: "Honcho Campout 2024: Hemlock Nights",
@@ -296,6 +321,8 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://soundcloud.com/honchopgh/campout-mix-series-nohup?in=honchopgh/sets/honcho-campout-2024-hemlock-nights",
+          poster:
+            "/images/posters/2024-08-16-honcho-campout-2024-hemlock-nights.jpg",
         },
         {
           title: "The Lodge 2024 (as Wicked Lover)",
@@ -347,6 +374,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/1931269",
+          poster: "/images/posters/2024-05-31-particle-fm-takeover.jpg",
         },
         {
           title: "Madi & Gia's 10 Year Anniverserave",
@@ -364,24 +392,30 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/1889493",
+          poster: "/images/posters/2024-03-30-rollercoaster-of-dubs.jpg",
         },
         {
           title: "Ground Hum + ANTiPODE (2023)",
+          lineup:
+            "8circuit, enereph, Hans Anderson, Idlefon, Hailstones, 'nohup'",
           date: "2023-11-18",
           venue: "Railspur",
           location: "Seattle, WA",
           category: "liveset",
           artistName: "'nohup'",
           link: "https://groundhum.net/pages/ground-hum-antipode-2023",
+          poster: "/images/posters/2023-11-18-ground-hum-antipode.jpg",
         },
         {
           title: "Kremfest 2023",
+          lineup: "DJ Assault, 'nohup', Hyeonje",
           date: "2023-09-29",
           venue: "Cherry",
           location: "Seattle, WA",
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/1733506",
+          poster: "/images/posters/2023-09-29-kremfest-2023.jpg",
         },
         {
           title: "impromptu w/ Sepehr",
@@ -392,6 +426,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/1760671",
+          poster: "/images/posters/2023-08-25-impromptu-w-sepehr.jpg",
         },
         {
           title: "Get U OFF feat. 'nohup'",
@@ -400,6 +435,8 @@ export default function () {
           location: "Seattle, WA",
           category: "DJ",
           artistName: "'nohup'",
+          link: "https://www.kremwerk.com/upcoming/2023/08/19/get-u-off-arel-ft-nohup",
+          poster: "/images/posters/2023-08-18-get-u-off.png",
         },
         {
           title: "Lodge 2023 (as Bobby)",
@@ -417,6 +454,8 @@ export default function () {
           location: "Seattle, WA",
           category: "DJ",
           artistName: "'nohup'",
+          link: "https://clubsandwichseattle.com/events/2023-07-02-club-sandwich-nohup--someone-person",
+          poster: "/images/posters/2023-07-02-club-sandwich.png",
         },
         {
           title: "Chasers",
@@ -427,6 +466,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://www.kremwerk.com/upcoming/2023/05/20/chasers-featuring-jennifer-spektor-and-nohup",
+          poster: "/images/posters/2023-05-20-chasers.jpg",
         },
         {
           title: "A Good Day Party",
@@ -438,12 +478,15 @@ export default function () {
         },
         {
           title: "Ground Hum 2023",
+          lineup:
+            "Strategy, Lori Goldston, Patricia Wolf, enereph, IVVY & Pascal, Selene, 'nohup', tondiue, Hans",
           date: "2023-02-02",
           venue: "Private Location",
           location: "Ballard, Seattle, WA",
           category: "liveset",
           artistName: "'nohup'",
           link: "https://groundhum.net/pages/ground-hum-2023",
+          poster: "/images/posters/2023-02-02-ground-hum-2023.gif",
         },
         {
           title: "Exploration",
@@ -454,15 +497,20 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/1650440",
+          poster: "/images/posters/2023-02-02-exploration.jpg",
         },
         {
           title: "X Marks The Spot: A Pirate Rave",
           date: "2022-10-28",
+          lineup:
+            "Arel, Bimbo Hypnosis, Emma Ecstasy, DJ HOUSEPLANTS, DJ ingat, sOFTPeaks, IVVY (LIVE), 'nohup', JENNGREEN",
           venue: "Kremwerk",
           location: "Seattle, WA",
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/1600679",
+          poster:
+            "/images/posters/2022-10-28-x-marks-the-spot-a-pirate-rave.jpg",
         },
         {
           title: "Off99 Presents",
@@ -473,6 +521,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://www.kremwerk.com/upcoming/2022/9/9/off99-presents-marcellus-pittman",
+          poster: "/images/posters/2022-09-09-off99-presents.jpg",
         },
         {
           title: "Vertex: Avalon Emerson",
@@ -482,6 +531,8 @@ export default function () {
           location: "Seattle, WA",
           category: "DJ",
           artistName: "'nohup'",
+          link: "https://www.kremwerk.com/upcoming/2021/7/16/vertex-avalon-emerson",
+          poster: "/images/posters/2021-07-30-vertex-avalon-emerson.png",
         },
         {
           title: "'nohup': Open to Close",
@@ -491,6 +542,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/1556943",
+          poster: "/images/posters/2022-07-15-nohup-open-to-close.jpg",
         },
         {
           title: "The Lodge 2022",
@@ -502,12 +554,16 @@ export default function () {
         },
         {
           title: "SLIP: A QUEER AFTERS PRIDE MOMENT",
+          lineup:
+            "Succubass, Jenn Green, Bimbo Hypnosis, 'nohup', Reverend Dollars, Sister Zo",
           date: "2022-06-22",
           venue: "Timbre Room",
           location: "Seattle, WA",
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/1549371",
+          poster:
+            "/images/posters/2022-06-22-slip-a-queer-afters-pride-moment.jpg",
         },
         {
           title: "Research presents Shaytoon Records",
@@ -518,6 +574,8 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/1512842",
+          poster:
+            "/images/posters/2022-04-08-research-presents-shaytoon-records.jpg",
         },
         {
           title: "Routine feat. Leonce",
@@ -528,9 +586,11 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/1512800",
+          poster: "/images/posters/2022-03-26-routine-feat-leonce.jpg",
         },
         {
           title: "Ground Hum 2022",
+          lineup: "Selene, Eve Defy, 'nohup', Qoqo, IVVY, tondiue",
           date: "2022-02-12",
           venue: "Private Location",
           location: "South Lake Union, Seattle, WA",
@@ -563,6 +623,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/1459127",
+          poster: "/images/posters/2021-08-21-routine.jpg",
         },
         {
           title: "Kayla + Alex's Wedding",
@@ -598,6 +659,7 @@ export default function () {
           location: "Online Event",
           category: "DJ",
           artistName: "'nohup'",
+          poster: "/images/posters/2021-04-25-odessa-stream.jpg",
         },
         {
           title: "illegal afters 02. livestream release party",
@@ -608,6 +670,8 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://www.kremwerk.com/upcoming/2021/3/5/illegal-afters-02-release-party",
+          poster:
+            "/images/posters/2021-03-05-illegal-afters-02-livestream-release-party.jpg",
         },
         {
           title: "Kremwerk Livestream Series",
@@ -618,6 +682,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://www.kremwerk.com/upcoming/2020/9/18/kremwerk-livestream-series-sangwoo-nohup",
+          poster: "/images/posters/2020-09-18-kremwerk-livestream-series.jpg",
         },
         {
           title: "Enter The Void rescored by 'nohup' & Surrealized",
@@ -626,6 +691,7 @@ export default function () {
           venue: "Parliament Tavern",
           category: "DJ",
           artistName: "'nohup'",
+          poster: "/images/posters/2020-01-25-enter-the-void.jpg",
         },
         {
           title: "Research",
@@ -636,6 +702,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/1336430",
+          poster: "/images/posters/2019-11-23-research.jpg",
         },
         {
           title: "Tech Startup",
@@ -646,6 +713,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/1345237",
+          poster: "/images/posters/2019-11-16-tech-startup.jpg",
         },
         {
           title: "Tetris Effect",
@@ -666,6 +734,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/1297206",
+          poster: "/images/posters/2019-09-19-kremfest-2019-shook-showcase.jpg",
         },
         {
           title: "The Lodge 2019 (as Mystery Contusion)",
@@ -684,6 +753,7 @@ export default function () {
           category: "DJ",
           artistName: "'nohup'",
           link: "https://ra.co/events/1243614",
+          poster: "/images/posters/2019-04-26-research-spring-formal.jpg",
         },
         {
           title: "Action Potential",
@@ -735,6 +805,7 @@ export default function () {
           location: "Baltimore, MD",
           category: "liveset",
           artistName: "'sighup'",
+          link: "https://soundcloud.com/tapdup-records/sighup-live-at-windup-space",
         },
         {
           title: "Third Rail featuring Tapdup",

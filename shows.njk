@@ -4,25 +4,29 @@ layout: main
 
 {% import 'components.njk' as components %}
 
+{% macro showLinks(show, class) %}
+  {% if show.link or show.poster %}
+    <div class="{{ class }}">
+      {% if show.link %}
+        <a href="{{ show.link }}"
+          >Event page <span aria-hidden="true">↗</span></a
+        >
+      {% endif %}
+      {% if show.poster %}
+        <a href="{{ show.poster }}" data-poster-title="{{ show.title }}"
+          >Poster <span aria-hidden="true">↗</span></a
+        >
+      {% endif %}
+    </div>
+  {% endif %}
+{% endmacro %}
+
 <style>
   .shows {
     --show-border: #d0d7de;
     --show-muted: #666;
     --show-lineup: var(--show-muted);
     --show-accent: var(--link-color);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .shows {
-      --show-border: #30363d;
-      --show-muted: #8b949e;
-      --show-lineup: var(--show-muted);
-      --show-accent: var(--link-color-dark);
-    }
-
-    .show-card_date {
-      color: var(--background-dark);
-    }
   }
 
   .showList,
@@ -48,7 +52,7 @@ layout: main
     justify-content: center;
     padding: 0.4em 0;
     background: var(--show-accent);
-    color: #fff;
+    color: var(--background-light);
     text-align: center;
     line-height: 1.15;
   }
@@ -137,8 +141,83 @@ layout: main
     margin-top: 0.35em;
   }
 
+  .show-card_links,
+  .show-archive_links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2em 1em;
+    font-size: 0.875em;
+    line-height: 1.25;
+    margin-top: 0.6em;
+  }
+
+  .show-archive_links {
+    margin-top: 0.35em;
+  }
+
   .show-year {
     margin: 1.25em 0 0.25em;
+  }
+
+  /* Poster lightbox */
+  .poster-lightbox {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    max-width: none;
+    max-height: none;
+  }
+
+  .poster-lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .poster-lightbox_figure {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .poster-lightbox_img {
+    display: block;
+    align-self: center;
+    width: auto;
+    height: auto;
+    max-width: min(92vw, 720px);
+    max-height: 80vh;
+  }
+
+  .poster-lightbox_caption {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    margin-top: 0.5em;
+    color: #fff;
+    font-size: 0.875em;
+  }
+
+  .poster-lightbox_caption a {
+    color: #fff;
+  }
+
+  /* Sits in its own row above the image, never covering the poster */
+  .poster-lightbox_close {
+    align-self: flex-end;
+    margin-bottom: 0.5em;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #fff;
+    font: inherit;
+    font-size: 0.875em;
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
+    cursor: pointer;
+  }
+
+  .poster-lightbox_close:hover,
+  .poster-lightbox_close:focus-visible {
+    text-decoration-thickness: 2px;
   }
 
   .show-archive_row {
@@ -154,6 +233,19 @@ layout: main
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
     padding-top: 0.2em;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .shows {
+      --show-border: #30363d;
+      --show-muted: #8b949e;
+      --show-lineup: var(--show-muted);
+      --show-accent: var(--link-color-dark);
+    }
+
+    .show-card_date {
+      color: var(--background-dark);
+    }
   }
 </style>
 
@@ -183,13 +275,7 @@ layout: main
                   {{ show.category }} · {{ show.artistName }}
                 </div>
               {% else %}
-                <div class="show-card_title">
-                  {% if show.link %}
-                    <a href="{{ show.link }}">{{ show.title }}</a>
-                  {% else %}
-                    {{ show.title }}
-                  {% endif %}
-                </div>
+                <div class="show-card_title">{{ show.title }}</div>
                 {% if show.lineup %}
                   <div class="show-card_lineup">{{ show.lineup }}</div>
                 {% endif %}
@@ -201,6 +287,7 @@ layout: main
                 <div class="show-card_meta">
                   {{ show.category }} · {{ show.artistName }}
                 </div>
+                {{ showLinks(show, "show-card_links") }}
               {% endif %}
             </div>
           </li>
@@ -218,13 +305,7 @@ layout: main
         <li class="show-archive_row">
           <span class="show-archive_date">{{ show.shortDate }}</span>
           <div>
-            <div class="show-archive_title">
-              {% if show.link %}
-                <a href="{{ show.link }}">{{ show.title }}</a>
-              {% else %}
-                {{ show.title }}
-              {% endif %}
-            </div>
+            <div class="show-archive_title">{{ show.title }}</div>
             {% if show.lineup %}
               <div class="show-archive_lineup">{{ show.lineup }}</div>
             {% endif %}
@@ -236,6 +317,7 @@ layout: main
             <div class="show-archive_meta">
               {{ show.category }} · {{ show.artistName }}
             </div>
+            {{ showLinks(show, "show-archive_links") }}
           </div>
         </li>
       {% endfor %}
@@ -246,7 +328,61 @@ layout: main
     I did my best to remember every show I've ever played. If you remember one
     that's missing, let me know!
   </p>
+
+  <dialog class="poster-lightbox" aria-label="Show poster">
+    <figure class="poster-lightbox_figure">
+      <button class="poster-lightbox_close" type="button" autofocus>
+        Close
+      </button>
+      <img class="poster-lightbox_img" alt="" />
+      <figcaption class="poster-lightbox_caption">
+        <span class="poster-lightbox_title"></span>
+        <a class="poster-lightbox_full" href="#"
+          >Open full size <span aria-hidden="true">↗</span></a
+        >
+      </figcaption>
+    </figure>
+  </dialog>
 </section>
+
+<script>
+  (() => {
+    const dialog = document.querySelector(".poster-lightbox");
+    if (!dialog || typeof dialog.showModal !== "function") return;
+
+    const img = dialog.querySelector(".poster-lightbox_img");
+    const title = dialog.querySelector(".poster-lightbox_title");
+    const full = dialog.querySelector(".poster-lightbox_full");
+    const close = dialog.querySelector(".poster-lightbox_close");
+
+    for (const link of document.querySelectorAll("a[data-poster-title]")) {
+      link.addEventListener("click", (event) => {
+        // Leave modified clicks alone so "open in new tab" still works
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+          return;
+        event.preventDefault();
+
+        const name = link.dataset.posterTitle;
+        img.src = link.href;
+        img.alt = `Poster for ${name}`;
+        title.textContent = name;
+        full.href = link.href;
+        dialog.showModal();
+      });
+    }
+
+    close.addEventListener("click", () => dialog.close());
+
+    // Clicks on the backdrop land on the dialog itself
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+
+    dialog.addEventListener("close", () => {
+      img.removeAttribute("src");
+    });
+  })();
+</script>
 
 <section>
   <h2>Coldbrew Collective</h2>
