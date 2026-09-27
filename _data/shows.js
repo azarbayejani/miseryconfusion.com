@@ -806,6 +806,7 @@ export default function () {
           category: "liveset",
           artistName: "'sighup'",
           link: "https://soundcloud.com/tapdup-records/sighup-live-at-windup-space",
+          poster: "/images/posters/2012-10-17-baltimore-fall-fest.png",
         },
         {
           title: "Third Rail featuring Tapdup",
@@ -815,6 +816,7 @@ export default function () {
           location: "College Park, MD",
           category: "liveset",
           artistName: "'sighup'",
+          poster: "/images/posters/2012-12-02-tapdup-third-rail.png",
         },
         {
           title: "SIGHUP @ Rid of Me",
@@ -831,6 +833,7 @@ export default function () {
           location: "College Park, MD",
           category: "liveset",
           artistName: "'sighup'",
+          poster: "/images/posters/2013-04-19-latex-bodice-sighup.jpg",
         },
         {
           title: "The Double Dip featuring 'sighup'",
