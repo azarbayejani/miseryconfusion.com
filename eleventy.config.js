@@ -119,15 +119,18 @@ export default function (eleventyConfig) {
 
   // Add a ?v=timestamp to the end of any url to bust the cache
   // use like {{ "/style.css" | bust }}
-  eleventyConfig.addFilter("bust", (url) => {
+  // If the file lives somewhere other than the url implies (e.g. a
+  // passthrough copy), pass its source path: {{ "/favicon.ico" | bust("images/favicon/favicon.ico") }}
+  eleventyConfig.addFilter("bust", (url, sourcePath) => {
     const [urlPart, paramPart] = url.split("?");
     const params = new URLSearchParams(paramPart || "");
     const relativeUrl =
-      urlPart.charAt(0) == "/" ? urlPart.substring(1) : urlPart;
+      sourcePath ??
+      (urlPart.charAt(0) == "/" ? urlPart.substring(1) : urlPart);
 
     try {
       const fileStats = fs.statSync(relativeUrl);
-      const dateTimeModified = new DateTime(fileStats.mtime).toFormat("X");
+      const dateTimeModified = DateTime.fromJSDate(fileStats.mtime).toFormat("X");
 
       params.set("v", dateTimeModified);
     } catch (error) {}
