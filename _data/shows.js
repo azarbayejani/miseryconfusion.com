@@ -1074,7 +1074,6 @@ export default function () {
         humanDate: date.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY),
         shortDate: date.toFormat("MMM d"),
         weekday: date.toFormat("cccc"),
-        monthDay: date.toFormat("MMM d"),
         year: date.year,
       };
     }),
