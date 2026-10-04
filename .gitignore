@@ -38,3 +38,8 @@ next-env.d.ts
 # 11ty
 .cache/
 _site/
+
+# editor swap files
+*.swp
+*.swo
+*~
