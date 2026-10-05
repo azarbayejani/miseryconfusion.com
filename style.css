@@ -236,6 +236,16 @@ img {
     margin-bottom: 0.5em;
   }
 
+  /* Keep the heading's margins symmetric so it stays centered on the
+     logo; the row carries the spacing above instead. */
+  .header {
+    margin-top: 0.5em;
+
+    h3 {
+      margin-top: 0.5em;
+    }
+  }
+
   h3 + p,
   .header + p {
     margin-top: 0.5em;
