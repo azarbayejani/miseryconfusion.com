@@ -4,14 +4,16 @@ title: Tools
 description: Tools for DJs built by Bobby Azarbayejani.
 ---
 
+{% import 'components.njk' as components %}
+
 <section>
   <a class="header" href="/tempo-adjust">
     <div class="header__logo-container">
-      <img
-        src="/images/bandcamp-tempo-adjust-logo.png"
-        alt="Tempo Adjust logo"
-        class="header__logo--h3"
-      />
+      {{
+        components.themedImage("/images/tempo-adjust-logo.png",
+        "/images/tempo-adjust-logo-dark.png", "Tempo Adjust logo",
+        "header__logo--h3")
+      }}
     </div>
     <h3>Tempo Adjust</h3>
   </a>

@@ -22,7 +22,7 @@ layout: main
 <section class="links" style="margin-top: 24px">
   <div>
     {% for link in links %}
-      {{ components.linkButton(link.name, link.url, link.image, link.imgClasses) }}
+      {{ components.linkButton(link.name, link.url, link.image, link.imgClasses, true, link.darkImage) }}
     {% endfor %}
   </div>
 </section>

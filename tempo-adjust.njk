@@ -3,7 +3,7 @@ layout: base
 title: Tempo Adjust
 description: Tempo Adjust is a set of browser extensions that let DJs detect and adjust the tempo of tracks on Bandcamp and Discogs.
 bodyClass: "product-page"
-image: "/images/bandcamp-tempo-adjust-logo.png"
+image: "/images/tempo-adjust-logo.png"
 ---
 
 {% import 'components.njk' as components %}
@@ -11,7 +11,16 @@ image: "/images/bandcamp-tempo-adjust-logo.png"
 <p><a href="/tools/">&larr; back to tools</a></p>
 <section class="header">
   <div class="header__logo-container">
-    <img src="{{ image }}" alt="{{ title }}" class="header__logo--h1" />
+    <img
+      src="{{ image }}"
+      alt="{{ title }}"
+      class="light-only header__logo--h1 og-image"
+    />
+    <img
+      src="/images/tempo-adjust-logo-dark.png"
+      alt="{{ title }}"
+      class="dark-only header__logo--h1"
+    />
   </div>
   <h1>{{ title }}</h1>
 </section>

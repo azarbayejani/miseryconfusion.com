@@ -378,3 +378,17 @@ article {
     filter: invert(1);
   }
 }
+
+.dark-only {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .light-only {
+    display: none;
+  }
+
+  .dark-only {
+    display: initial;
+  }
+}

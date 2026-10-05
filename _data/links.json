@@ -22,7 +22,8 @@
   {
     "name": "Tempo Adjust",
     "url": "/tempo-adjust",
-    "image": "/images/bandcamp-tempo-adjust-logo.png"
+    "image": "/images/tempo-adjust-logo.png",
+    "darkImage": "/images/tempo-adjust-logo-dark.png"
   },
   {
     "name": "Blog",
