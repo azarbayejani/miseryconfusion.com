@@ -1,0 +1,131 @@
+---
+layout: base
+title: Tempo Adjust
+description: Tempo Adjust is a set of browser extensions that let DJs detect and adjust the tempo of tracks on Bandcamp and Discogs.
+bodyClass: "product-page"
+image: "/images/bandcamp-tempo-adjust-logo.png"
+---
+
+{% import 'components.njk' as components %}
+
+<p><a href="/tools/">&larr; back to tools</a></p>
+<section class="header">
+  <div class="header__logo-container">
+    <img src="{{ image }}" alt="{{ title }}" class="header__logo--h1" />
+  </div>
+  <h1>{{ title }}</h1>
+</section>
+
+<section>
+  <p>{{ description }}</p>
+  <p>
+    Tempo Adjust is available as two extensions for Chrome and Firefox, one for
+    each site. A single Safari app for Mac, iPhone, and iPad that covers both
+    sites is in the works.
+  </p>
+</section>
+
+<section
+  id="install"
+  style="display: flex; flex-direction: column; align-items: center"
+>
+  <h2 id="bandcamp-tempo-adjust">Bandcamp Tempo Adjust</h2>
+  <div>
+    {{
+      components.linkButton("Install on Chrome",
+      "https://chromewebstore.google.com/detail/bandcamp-tempo-adjust/iniomjoihcjgakkfaebmcbnhmiobppel",
+      "/images/chrome-icon.png")
+    }}
+    {{
+      components.linkButton("Install on Firefox",
+      "https://addons.mozilla.org/en-US/firefox/addon/bandcamp-tempo-adjust/",
+      "/images/firefox-icon.png")
+    }}
+  </div>
+
+  <h2 id="discogs-tempo-adjust">Discogs Tempo Adjust</h2>
+  <div>
+    {{
+      components.linkButton("Install on Chrome",
+      "https://chromewebstore.google.com/detail/discogs-tempo-adjust/lifpcepdalajjkklljnfcjpjjjllfhha",
+      "/images/chrome-icon.png")
+    }}
+    {{
+      components.linkButton("Install on Firefox",
+      "https://addons.mozilla.org/en-US/firefox/addon/discogs-tempo-adjust/",
+      "/images/firefox-icon.png")
+    }}
+  </div>
+
+  <h2 id="safari">Tempo Adjust for Safari</h2>
+  <p>Coming soon to the App Store.</p>
+
+  <div>
+    {{
+      components.linkButton("GitHub",
+      "https://github.com/azarbayejani/bandcamp-tempo-adjust",
+      "/images/github-icon.png", "invert-on-dark")
+    }}
+    {{
+      components.linkButton("Donate to support the project",
+      "https://buymeacoffee.com/miseryconfusion",
+      "/images/donate-icon.png", "invert-on-dark")
+    }}
+  </div>
+</section>
+
+<section>
+  <h2>Features</h2>
+  <ul>
+    <li>
+      <strong>Tempo adjustment:</strong> a pitch fader for every player, on
+      album, track, and collection pages on Bandcamp and on release videos on
+      Discogs
+    </li>
+    <li>
+      <strong>Master tempo:</strong> change the tempo without changing the pitch
+    </li>
+    <li>
+      <strong>BPM detection:</strong> detect the BPM of any track (Bandcamp
+      only)
+    </li>
+    <li>
+      <strong>Purchase export:</strong> export your Bandcamp purchases with
+      currency conversion to analyze your spending
+    </li>
+  </ul>
+</section>
+
+<section>
+  <p><em>On Bandcamp:</em></p>
+  <img
+    src="/images/bandcamp-tempo-adjust-screenshot.png"
+    alt="Bandcamp Tempo Adjust screenshot"
+    class="full-width-image"
+  />
+</section>
+
+<section>
+  <p><em>On Discogs:</em></p>
+  <img
+    src="/images/discogs-tempo-adjust-screenshot.png"
+    alt="Discogs Tempo Adjust screenshot"
+    class="full-width-image"
+  />
+</section>
+
+<section>
+  <h2>Press</h2>
+  <ul>
+    <li>
+      <a href="https://ra.co/news/81694"
+        >New free web extension allows Discogs users to adjust tempos</a
+      >, Resident Advisor, November 2024
+    </li>
+    <li>
+      <a href="https://cdm.link/bandcamp-and-discogs-tempo-adjust/"
+        >Bandcamp and Discogs Tempo Adjust has a new UI</a
+      >, CDM, November 2024
+    </li>
+  </ul>
+</section>

@@ -20,15 +20,9 @@
     "image": "/images/soundcloud.svg"
   },
   {
-    "name": "Bandcamp Tempo Adjust",
-    "url": "/bandcamp-tempo-adjust",
+    "name": "Tempo Adjust",
+    "url": "/tempo-adjust",
     "image": "/images/bandcamp-tempo-adjust-logo.png"
-  },
-  {
-    "name": "Discogs Tempo Adjust",
-    "url": "/discogs-tempo-adjust",
-    "imgClasses": "invert-on-dark",
-    "image": "/images/discogs-tempo-adjust-logo.png"
   },
   {
     "name": "Blog",
