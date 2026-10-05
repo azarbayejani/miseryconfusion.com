@@ -316,6 +316,23 @@ ul li {
   flex-direction: column;
 }
 
+/* Install list on the Tempo Adjust page: browser headings, product buttons */
+.install {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header {
+    align-items: center;
+    margin-bottom: 0.25em;
+  }
+
+  .link-button .icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
 .full-width-image {
   width: 100%;
   height: auto;

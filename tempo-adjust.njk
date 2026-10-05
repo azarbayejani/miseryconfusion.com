@@ -34,40 +34,57 @@ image: "/images/tempo-adjust-logo.png"
   </p>
 </section>
 
-<section
-  id="install"
-  style="display: flex; flex-direction: column; align-items: center"
->
-  <h2 id="bandcamp-tempo-adjust">Bandcamp Tempo Adjust</h2>
+<section id="install" class="install">
+  <h2 id="chrome" class="header">
+    <span class="header__logo-container">
+      <img src="/images/chrome-icon.png" alt="" class="header__logo--h3" />
+    </span>
+    Install on Chrome
+  </h2>
   <div>
     {{
-      components.linkButton("Install on Chrome",
+      components.linkButton("Bandcamp Tempo Adjust",
       "https://chromewebstore.google.com/detail/bandcamp-tempo-adjust/iniomjoihcjgakkfaebmcbnhmiobppel",
-      "/images/chrome-icon.png")
+      "/images/bandcamp-tempo-adjust-logo.png")
     }}
     {{
-      components.linkButton("Install on Firefox",
-      "https://addons.mozilla.org/en-US/firefox/addon/bandcamp-tempo-adjust/",
-      "/images/firefox-icon.png")
+      components.linkButton("Discogs Tempo Adjust",
+      "https://chromewebstore.google.com/detail/discogs-tempo-adjust/lifpcepdalajjkklljnfcjpjjjllfhha",
+      "/images/discogs-tempo-adjust-logo.png", "invert-on-dark")
     }}
   </div>
 
-  <h2 id="discogs-tempo-adjust">Discogs Tempo Adjust</h2>
+  <h2 id="firefox" class="header">
+    <span class="header__logo-container">
+      <img src="/images/firefox-icon.png" alt="" class="header__logo--h3" />
+    </span>
+    Install on Firefox
+  </h2>
   <div>
     {{
-      components.linkButton("Install on Chrome",
-      "https://chromewebstore.google.com/detail/discogs-tempo-adjust/lifpcepdalajjkklljnfcjpjjjllfhha",
-      "/images/chrome-icon.png")
+      components.linkButton("Bandcamp Tempo Adjust",
+      "https://addons.mozilla.org/en-US/firefox/addon/bandcamp-tempo-adjust/",
+      "/images/bandcamp-tempo-adjust-logo.png")
     }}
     {{
-      components.linkButton("Install on Firefox",
+      components.linkButton("Discogs Tempo Adjust",
       "https://addons.mozilla.org/en-US/firefox/addon/discogs-tempo-adjust/",
-      "/images/firefox-icon.png")
+      "/images/discogs-tempo-adjust-logo.png", "invert-on-dark")
     }}
   </div>
 
-  <h2 id="safari">Tempo Adjust for Safari</h2>
-  <p>Coming soon to the App Store.</p>
+  <h2 id="safari" class="header">
+    <span class="header__logo-container">
+      <img src="{{ image }}" alt="" class="light-only header__logo--h3" />
+      <img
+        src="/images/tempo-adjust-logo-dark.png"
+        alt=""
+        class="dark-only header__logo--h3"
+      />
+    </span>
+    Install on Safari
+  </h2>
+  <p>Coming soon to the App Store for Mac, iPhone, and iPad.</p>
 
   <div>
     {{
