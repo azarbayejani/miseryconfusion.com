@@ -22,8 +22,7 @@
   {
     "name": "Tempo Adjust",
     "url": "/tempo-adjust",
-    "image": "/images/tempo-adjust-logo.png",
-    "darkImage": "/images/tempo-adjust-logo-dark.png"
+    "image": "/images/tempo-adjust-logo.png"
   },
   {
     "name": "Blog",

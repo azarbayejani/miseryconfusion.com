@@ -1,21 +1,10 @@
-{# An image with a separate rendition for dark mode. Both <img> tags are
-   emitted so eleventy-img processes each; CSS shows only one. #}
-{% macro themedImage(light, dark, alt, classes="") %}
-  <img src="{{ light }}" alt="{{ alt }}" class="light-only {{ classes }}" />
-  <img src="{{ dark }}" alt="{{ alt }}" class="dark-only {{ classes }}" />
-{% endmacro %}
-
-{% macro linkButton(text, link, image, imgClasses="", newTab=true, darkImage="") %}
+{% macro linkButton(text, link, image, imgClasses="", newTab=true) %}
   <a
     href="{{ link }}"
     class="link-button"
     {% if newTab %}target="_blank"{% endif %}
   >
-    {% if darkImage %}
-      {{ themedImage(image, darkImage, text, "icon " + (imgClasses or "")) }}
-    {% else %}
-      <img src="{{ image }}" alt="{{ text }}" class="icon {{ imgClasses }}" />
-    {% endif %}
+    <img src="{{ image }}" alt="{{ text }}" class="icon {{ imgClasses }}" />
     <div class="text">{{ text }}</div>
   </a>
 {% endmacro %}
