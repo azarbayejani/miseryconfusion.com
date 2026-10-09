@@ -23,7 +23,7 @@
     <li>
       <a
         href="/tools"
-        {% if page.url == '/tools/' %}aria-current="page"{% endif %}
+        {% if page.url == '/tools/' or page.url.startsWith('/tempo-adjust/') %}aria-current="page"{% endif %}
         >tools</a
       >
     </li>
