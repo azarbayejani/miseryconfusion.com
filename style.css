@@ -153,6 +153,37 @@ nav {
   }
 }
 
+.feed-link {
+  margin: 0.75em 0 0;
+  text-align: right;
+  font-size: 0.9em;
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.feed-link__icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.1em;
+  margin-right: 0.2em;
+}
+
+/* Knock the symbol out to the page background in light mode; keep it
+   black in dark mode. */
+.feed-link__symbol {
+  fill: var(--background-light);
+
+  @media (prefers-color-scheme: dark) {
+    fill: #000;
+  }
+}
+
 section {
   padding: 10px 0;
   border-bottom: 1px solid #c9d1d9;
