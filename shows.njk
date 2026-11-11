@@ -29,6 +29,11 @@ layout: main
     --show-accent: var(--link-color);
   }
 
+  .show-booking {
+    margin: 0 0 1.5em;
+    color: var(--show-muted);
+  }
+
   .showList,
   .show-archive {
     list-style-type: none;
@@ -295,6 +300,13 @@ layout: main
       </ol>
     {% endfor %}
   {% endif %}
+
+  <p class="show-booking">
+    Booking inquiries:
+    <a href="mailto:nohup@miseryconfusion.com?subject=Booking%20Inquiry"
+      >nohup@miseryconfusion.com</a
+    >
+  </p>
 
   <h2>Past dates:</h2>
 
