@@ -7,14 +7,17 @@ export default function () {
       id: "nohup",
       description: "'nohup' is my primary DJ and production alias since 2018.",
       shows: [
-        // {
-        //   title: "TBD",
-        //   date: "2026-11-28",
-        //   venue: "TBD",
-        //   location: "Seattle, WA",
-        //   category: "DJ",
-        //   artistName: "'nohup'",
-        // },
+        {
+          title: "JOOSED: Saturday Nite Special",
+          lineup: "Red Gem, 'nohup', DJ Dissolve",
+          date: "2026-11-28",
+          venue: "Kremwerk",
+          location: "Seattle, WA",
+          category: "DJ",
+          artistName: "'nohup'",
+          link: "https://www.instagram.com/p/DfnFAV0RaUf/",
+          poster: "/images/posters/2026-11-28-joosed-saturday-nite-special.jpg",
+        },
         {
           title: "Party Politics: A Panel presented by Peace Portal",
           lineup: "Auxpope, Karim Moussa, Trustfall, Seelene, 'nohup'",
