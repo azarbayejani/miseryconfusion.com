@@ -1,38 +1,13 @@
 [
   {
-    "name": "Rollercoaster of Dubs - October 17",
-    "url": "https://tickets.kremwerk.com/event/kremwerk-rollercoaster-of-dubs-10-17-2026-2200/tickets/seg?e=EPY",
-    "image": "/images/posters/2026-10-17-rollercoaster-of-dubs-4.png"
-  },
-  {
-    "name": "Kirkland Signature 6am @ The Lodge",
-    "url": "https://soundcloud.com/miseryconfusion/kirkland-signature-6am-the-lodge-2026",
-    "image": "/images/bobbycore.jpg"
-  },
-  {
-    "name": "Bobby & Zac's Lodge Afters (Unofficial)",
-    "url": "https://soundcloud.com/miseryconfusion/bobby-zacs-lodge-afters",
-    "image": "/images/bobby-zacs-lodge-afters.jpg"
-  },
-  {
-    "name": "Soundcloud",
-    "url": "https://soundcloud.com/miseryconfusion",
-    "image": "/images/soundcloud.svg"
-  },
-  {
     "name": "Tempo Adjust",
     "url": "/tempo-adjust",
     "image": "/images/tempo-adjust-logo.png"
   },
   {
-    "name": "Blog",
-    "url": "/blog",
-    "image": "/images/kaaba-emoji.png"
-  },
-  {
-    "name": "Bluesky",
-    "url": "https://bsky.app/profile/miseryconfusion.com",
-    "image": "/images/bluesky.svg"
+    "name": "Soundcloud",
+    "url": "https://soundcloud.com/miseryconfusion",
+    "image": "/images/soundcloud.svg"
   },
   {
     "name": "Donate to support my projects",
