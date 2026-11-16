@@ -362,6 +362,25 @@ ul li {
     width: 48px;
     height: 48px;
   }
+
+  p {
+    margin-top: 0;
+  }
+}
+
+/* Apple's "Download on the App Store" badge. Apple asks for clear space of at
+   least 1/10 the badge height on every side, so keep the padding. */
+.app-store-badge {
+  display: inline-block;
+  padding: 6px;
+  margin-bottom: 8px;
+  line-height: 0;
+
+  img {
+    display: block;
+    width: 180px;
+    height: 60px;
+  }
 }
 
 .full-width-image {
