@@ -20,6 +20,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("images/*.mp4");
   eleventyConfig.addPassthroughCopy("images/*.svg");
   eleventyConfig.addPassthroughCopy("images/posters");
+  // 2x renders the Tempo Adjust page sizes itself; the image transform would
+  // shrink them to their width attribute, so they skip it with eleventy:ignore.
+  eleventyConfig.addPassthroughCopy("images/tempo-adjust-hero-*.png");
+  eleventyConfig.addPassthroughCopy("images/tempo-adjust-discogs-*.png");
   eleventyConfig.addPassthroughCopy("files/**/*");
   eleventyConfig.addPassthroughCopy({ "blog/**/images/*.png": "blog/images" });
   eleventyConfig.addPassthroughCopy({ "images/favicon": "/" });

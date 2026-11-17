@@ -237,12 +237,32 @@ img {
 .header {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 10px;
+
+  /* The page title sits a clear step above the 1.5em section headings. */
+  h1 {
+    font-size: 2em;
+    line-height: 1.15;
+  }
+}
+
+/* Title with a subtitle beneath it. The pair shares one block with its own
+   spacing, in place of the heading's uneven default margins, so the logo
+   centers on the letterforms; the extra below offsets the title sitting low
+   in its line box. */
+.header__text {
+  margin: 10px 0 16px;
 
   h1 {
-    font-size: 1.5em;
-    line-height: 1;
+    margin: 0;
   }
+}
+
+.header__subtitle {
+  margin: 2px 0 0;
+  font-size: 1.1em;
+  line-height: 1.3;
+  opacity: 0.75;
 }
 
 .header__logo-container {
@@ -252,8 +272,8 @@ img {
 }
 
 .header__logo--h1 {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
 }
 
 .header__logo--h3 {
@@ -347,45 +367,260 @@ ul li {
   flex-direction: column;
 }
 
-/* Install list on the Tempo Adjust page: browser headings, product buttons */
+.centered {
+  text-align: center;
+}
+
+/* Install section on the Tempo Adjust page */
 .install {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  .header {
-    align-items: center;
-    margin-bottom: 0.25em;
-  }
-
   .link-button .icon {
     width: 48px;
     height: 48px;
   }
+}
 
-  p {
-    margin-top: 0;
+/* One tile per browser: bare logo, browser name, platform note, and the
+   store button(s) underneath. */
+.browser-tiles {
+  list-style: none;
+  /* Bottom margin matches the h2's top margin so the section is balanced. */
+  margin: 0 0 20px;
+  padding: 0;
+  width: 100%;
+  max-width: 560px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto auto;
+  column-gap: 16px;
+
+  li {
+    margin: 0;
   }
 }
 
-/* Apple's "Download on the App Store" badge. Apple asks for clear space of at
-   least 1/10 the badge height on every side, so keep the padding. */
+/* Each tile spans the parent's four rows (icon, name, platforms, actions) so
+   the buttons line up across tiles even when a caption wraps. */
+.browser-tile {
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  justify-items: center;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}
+
+.browser-tile__icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  margin-bottom: 0.5em;
+}
+
+.browser-tile__name {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.browser-tile__platforms {
+  font-size: 0.85em;
+  line-height: 1.3;
+  opacity: 0.75;
+}
+
+/* The store buttons: a compact version of .link-button, stacked and
+   equal-width, top-aligned so Safari's single badge sits level with the
+   first button in the other columns. */
+.browser-tile__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: start;
+  gap: 8px;
+  width: 100%;
+  max-width: 160px;
+  margin-top: 0.75em;
+
+  .link-button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    margin-bottom: 0;
+  }
+
+  .link-button .icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+  }
+}
+
+/* Support links for the project: one row of three compact, equal-width
+   buttons, sized and aligned to match the browser tile columns above. */
+.resources {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+  max-width: 560px;
+  margin: 8px auto;
+
+  .link-button {
+    flex: 1 1 0;
+    min-width: 0;
+    justify-content: center;
+    padding: 8px 12px;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 0.95em;
+  }
+
+  .link-button .icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+  }
+
+  .link-button .text {
+    flex-grow: 0;
+    white-space: nowrap;
+  }
+
+  /* On the narrowest phones three labelled buttons only fit without icons. */
+  @media (max-width: 360px) {
+    .link-button .icon {
+      display: none;
+    }
+  }
+}
+
+/* Apple's "Download on the App Store" badge, sized to match the buttons.
+   Apple asks for clear space of at least 1/10 the badge height on every
+   side, so keep the padding. */
 .app-store-badge {
   display: inline-block;
-  padding: 6px;
-  margin-bottom: 8px;
+  padding: 5px;
+  margin: -5px;
   line-height: 0;
 
   img {
     display: block;
-    width: 180px;
-    height: 60px;
+    width: 150px;
+    height: 50px;
+  }
+}
+
+/* On narrow screens each browser becomes one horizontal row: logo, then
+   name over platform note, then the store button(s) on the right. */
+@media (max-width: 560px) {
+  /* The tiles become left-aligned rows here, so the heading follows them. */
+  .install {
+    align-items: flex-start;
+  }
+
+  .install h2 {
+    align-self: flex-start;
+  }
+
+  .browser-tiles {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: none;
+  }
+
+  .browser-tile {
+    display: grid;
+    grid-row: auto;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "icon name actions"
+      "icon platforms actions";
+    column-gap: 10px;
+    align-items: center;
+    justify-items: start;
+    text-align: left;
+  }
+
+  .browser-tile__icon {
+    grid-area: icon;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+  }
+
+  .browser-tile__name {
+    grid-area: name;
+    align-self: end;
+  }
+
+  .browser-tile__platforms {
+    grid-area: platforms;
+    align-self: start;
+    font-size: 0.8em;
+  }
+
+  .browser-tile__actions {
+    grid-area: actions;
+    align-self: center;
+    flex-direction: row;
+    gap: 6px;
+    width: auto;
+    max-width: none;
+    margin: 0;
+
+    .link-button {
+      width: auto;
+      justify-content: center;
+      padding: 10px 8px;
+      font-size: 0.9em;
+    }
+
+    .link-button .icon {
+      display: none;
+    }
+  }
+
+  .resources {
+    gap: 8px;
+
+    .link-button {
+      padding: 10px 8px;
+      font-size: 0.9em;
+    }
+  }
+
+  .app-store-badge {
+    margin: 0;
+    padding: 0;
+  }
+
+  .app-store-badge img {
+    width: 120px;
+    height: 40px;
   }
 }
 
 .full-width-image {
   width: 100%;
   height: auto;
+}
+
+/* The device lineups on the Tempo Adjust page: 2x renders at the column's
+   width with the same corner radius as the buttons. */
+.lineup {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 6px;
+  border-radius: 8px;
 }
 
 article {
